@@ -49,8 +49,8 @@ elif app_mode == "SVR":
     SVR_app.run(Input_data=Input_data)
 elif app_mode == "GBDT":
     GBDT_app.run(Input_data=Input_data)
-elif app_mode == "XGB":
-    XGB_app.run(Input_data=Input_data)
+#elif app_mode == "XGB":
+#    XGB_app.run(Input_data=Input_data)
 elif app_mode == "RandomForest":
     RandomForest_app.run(Input_data=Input_data)
 elif app_mode == "Adaboost":
