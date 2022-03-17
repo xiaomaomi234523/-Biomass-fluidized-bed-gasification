@@ -5,4 +5,4 @@ numpy==1.19.5
 matplotlib==3.5.0
 --find-links https://download.pytorch.org/whl/torch_stable.html
 torch==1.10.0+cpu
-xgboost==0.4a13
+xgboost==1.5.2
