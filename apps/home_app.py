@@ -17,7 +17,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
     file_abs_path = os.path.abspath(dir_name)[0:-4]
     print(file_abs_path)
 
-    image = Image.open(file_abs_path+r'data\fluid_bed.gif')
+    image = Image.open(file_abs_path+r'data/fluid_bed.gif')
 
     st.image(image, caption='流化床模拟')
 
