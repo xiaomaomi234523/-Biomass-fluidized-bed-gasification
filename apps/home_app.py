@@ -35,7 +35,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
         models = {"CO": AdaBoostRegressor(learning_rate=2, n_estimators=350),"H2":AdaBoostRegressor(learning_rate=2, n_estimators=350),"CH4": AdaBoostRegressor(learning_rate=2, n_estimators=400),"CO2":GradientBoostingRegressor(max_depth=1, min_samples_split=6, n_estimators=200)}
         load_state = st.text('Loading...')
         if st.checkbox('给出优化建议'):
-            dT = 0
+            dT = 1000000
             dER = 0
             for target in ["CO", "H2", "CH4", "CO2"]:
                 X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
