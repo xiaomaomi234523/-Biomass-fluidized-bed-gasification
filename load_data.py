@@ -12,12 +12,12 @@ def load_all(target):
     file_abs_path=os.path.abspath(dir_name)
    # st.write (file_abs_path)
 
-    X_train = pd.read_csv(file_abs_path+r"\data\X_train_sc_st_pca_"+target+".csv")
-    X_test = pd.read_csv(file_abs_path+r"\data\X_test_sc_st_pca_"+target+".csv")
-    y_train = pd.read_csv(file_abs_path+r"\data\train_y_"+target+".csv")
-    y_test = pd.read_csv(file_abs_path+r"\data\test_y_"+target+".csv")
-    test_data = pd.read_csv(file_abs_path+r"\data\test_data.csv")
-    train_data = pd.read_csv(file_abs_path+r"\data\train_data.csv")
+    X_train = pd.read_csv(file_abs_path+r"/data/X_train_sc_st_pca_"+target+".csv")
+    X_test = pd.read_csv(file_abs_path+r"/data/X_test_sc_st_pca_"+target+".csv")
+    y_train = pd.read_csv(file_abs_path+r"/data/train_y_"+target+".csv")
+    y_test = pd.read_csv(file_abs_path+r"/data/test_y_"+target+".csv")
+    test_data = pd.read_csv(file_abs_path+r"/data/test_data.csv")
+    train_data = pd.read_csv(file_abs_path+r"/data/train_data.csv")
     X_train = np.array(X_train)
     X_test = np.array(X_test)
     y_train = np.array(y_train)
@@ -31,7 +31,7 @@ def load_csv(file_name):
      dir_name = os.path.dirname(current_path)
      file_abs_path = os.path.abspath(dir_name)
 
-     file = pd.read_csv(file_abs_path+"\\data\\"+file_name)
+     file = pd.read_csv(file_abs_path+"/data/"+file_name)
      return file
 
 
