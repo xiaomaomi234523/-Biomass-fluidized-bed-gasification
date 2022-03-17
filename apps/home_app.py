@@ -57,7 +57,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
                 input_data_ER = Input_preprocess(Input_data_ER)
                 input_predict_ER = model.fit(X_train, y_train).predict(input_data_ER)
                 l_ER.append(input_predict_ER)
-                print(Input_data)
+          
 
 
 
