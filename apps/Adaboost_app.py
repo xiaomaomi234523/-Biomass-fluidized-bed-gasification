@@ -26,11 +26,11 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
     model = AdaBoostRegressor(n_estimators=n_estimators, learning_rate=learning_rate)
 
     if st.checkbox('学习曲线'):
-        st.write('集成学习绘制学习曲线占用资源过多暂时停用,请试试单一学习器')
-        # curve_load_state = st.text('Loading learning curve...')
-        # title = r"Learning Curves GBDT"
-        # Plot_learning_curve(model, title, X_train, y_train)
-        # curve_load_state.text('Loading learning curve...done!')
+#         st.write('集成学习绘制学习曲线占用资源过多暂时停用,请试试单一学习器')
+        curve_load_state = st.text('Loading learning curve...')
+        title = r"Learning Curves GBDT"
+        Plot_learning_curve(model, title, X_train, y_train)
+        curve_load_state.text('Loading learning curve...done!')
 
     # 评价指标
     test_predict = model.fit(X_train, y_train).predict(X_test).reshape(-1, 1)
