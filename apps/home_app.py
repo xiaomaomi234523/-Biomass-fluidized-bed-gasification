@@ -46,7 +46,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
                 input_predict = model.fit(X_train, y_train).predict(input_data)
                 l.append(input_predict)
                 
-                Input_data_T =  copy.deepcopy(Input_data)
+                Input_data_T =  copy.deepcopy(Input_data)   # 浅拷贝深拷贝！！！！！！！！！
                 Input_data_T[6] = Input_data[6]+dT     
                 input_data_T = Input_preprocess(Input_data_T)
                 input_predict_T = model.fit(X_train, y_train).predict(input_data_T)
