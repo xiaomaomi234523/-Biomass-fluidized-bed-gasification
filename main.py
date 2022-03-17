@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from apps import GBDT_app, Adaboost_app, ElasticNet_app, ANN_app, RandomForest_app, SVR_app, XGB_app, home_app, \
+from apps import GBDT_app, Adaboost_app, ElasticNet_app, ANN_app, RandomForest_app, SVR_app, home_app, \
     Lasso_app,Ridge_app
 
 
