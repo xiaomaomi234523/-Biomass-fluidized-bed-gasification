@@ -6,4 +6,4 @@ matplotlib==3.5.0
 --find-links https://download.pytorch.org/whl/torch_stable.html
 torch==1.10.0+cpu
 xgboost==1.5.0
-_py-xgboost-mutex==2.0
+py-xgboost-mutex==2.0
