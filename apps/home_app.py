@@ -49,10 +49,10 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
                 Input_data_T =  copy.deepcopy(Input_data_T)
                 Input_data_T[6] = Input_data[6]+dT     
                 input_data_T = Input_preprocess(Input_data_T)
-                input_predict_T = model.fit(X_train, y_train).predict(input_data_T)
+                input_predict_T = model.fit(X_train, y_train).predict(input_data)
                 l_T.append(input_predict_T)
                 
-                Input_data_ER =  copy.deepcopy(Input_data_ER)
+                Input_data_ER =  copy.deepcopy(Input_data)
                 Input_data_ER[5] = Input_data[5]+dER
                 input_data_ER = Input_preprocess(Input_data_ER)
                 input_predict_ER = model.fit(X_train, y_train).predict(input_data_ER)
