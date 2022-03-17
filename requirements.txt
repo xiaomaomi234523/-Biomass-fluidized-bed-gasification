@@ -4,5 +4,5 @@ streamlit==1.2.0
 numpy==1.19.5
 matplotlib==3.5.0
 --find-links https://download.pytorch.org/whl/torch_stable.html
-torch==1.5.0+gpu
+torch==1.11.0+cpu
 pip==21.2.4
