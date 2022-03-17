@@ -35,7 +35,7 @@ elif input_mode == "单组数据":
 
 # Once we have the dependencies, add a selector for the app mode on the sidebar.
 st.sidebar.title("选择页面")
-app_mode = st.sidebar.selectbox("",("home","Lasso","SVR","ANN","Ridge", "ElasticNet","GBDT","RandomForest","Adaboost"))
+app_mode = st.sidebar.selectbox("",("home","Lasso","SVR","ANN","XGboost","Ridge", "ElasticNet","GBDT","RandomForest","Adaboost"))
 if app_mode == "home":
     home_app.run(Input_data=Input_data)
     st.sidebar.success('请选择模型并试着调参吧!".')
@@ -49,8 +49,8 @@ elif app_mode == "SVR":
     SVR_app.run(Input_data=Input_data)
 elif app_mode == "GBDT":
     GBDT_app.run(Input_data=Input_data)
-#elif app_mode == "XGB":
-#    XGB_app.run(Input_data=Input_data)
+elif app_mode == "XGB":
+    XGB_app.run(Input_data=Input_data)
 elif app_mode == "RandomForest":
     RandomForest_app.run(Input_data=Input_data)
 elif app_mode == "Adaboost":
