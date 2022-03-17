@@ -7,6 +7,7 @@ from Input_preprocess import Input_preprocess
 from Input_preprocess import Input_preprocess
 def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
     st.title('XGB')
+    st.write('空间开销太大了？ 在本地运行明明蛮快的')
 
     # 控件
     target = st.sidebar.selectbox("选择要预测的气体", (
