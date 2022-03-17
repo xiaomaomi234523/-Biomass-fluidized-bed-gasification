@@ -35,16 +35,19 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
         models = {"CO": AdaBoostRegressor(learning_rate=2, n_estimators=350),"H2":AdaBoostRegressor(learning_rate=2, n_estimators=350),"CH4": AdaBoostRegressor(learning_rate=2, n_estimators=400),"CO2":GradientBoostingRegressor(max_depth=1, min_samples_split=6, n_estimators=200)}
         load_state = st.text('Loading...')
         if st.checkbox('给出优化建议'):
-            dT = 1000000
-            dER = 0
+            dT = 200
+            dER = 0.5
             for target in ["CO", "H2", "CH4", "CO2"]:
                 X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
                 model = models[target]
+                
                 input_data = Input_preprocess(Input_data)
                 input_predict = model.fit(X_train, y_train).predict(input_data)
                 l.append(input_predict)
+                
                 Input_data_T = Input_data
                 Input_data_T[6] = Input_data[6]+dT
+                
                 input_data_T = Input_preprocess(Input_data_T)
                 input_predict_T = model.fit(X_train, y_train).predict(input_data_T)
                 l_T.append(input_predict_T)
@@ -53,6 +56,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
                 input_data_ER = Input_preprocess(Input_data_ER)
                 input_predict_ER = model.fit(X_train, y_train).predict(input_data_ER)
                 l_ER.append(input_predict_ER)
+                print(Input_data)
 
 
 
