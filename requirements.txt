@@ -3,5 +3,5 @@ scikit-learn==0.23.2
 streamlit==1.2.0
 numpy==1.19.5
 matplotlib==3.5.0
-pytorch==0.1.2
+"D:\AppsDownload\GoogleDownload\torch-1.6.0-cp38-cp38-win_amd64.whl"
 pip==21.2.4
