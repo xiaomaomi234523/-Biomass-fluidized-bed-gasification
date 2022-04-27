@@ -13,7 +13,7 @@ if input_mode == "上传数据文件（注意格式）":
     st.sidebar.subheader('demo暂不支持上传文件，试试单组数据')
     uploaded_file = st.sidebar.file_uploader("上传一个csv文件")
     if uploaded_file is not None:
-        print(uploaded_file)
+        st.write(uploaded_file)
         Input_data = pd.read_csv(uploaded_file)
 elif input_mode == "单组数据":
     C = st.sidebar.slider('C[wt.%dry basis]',0,100,50)
