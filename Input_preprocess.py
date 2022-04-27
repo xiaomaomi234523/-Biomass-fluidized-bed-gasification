@@ -81,7 +81,7 @@ def Input_preprocess(Input_data):
 
     #  拆出来，输出
     input_data = np.array(X_test_sc_st_pca[-len(input_data):])
-    #print(input_data.shape)
+    print(input_data.shape)
 
     return input_data
 
