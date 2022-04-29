@@ -7,7 +7,7 @@ from apps import GBDT_app,XGB_app, Adaboost_app, ElasticNet_app, ANN_app, Random
 
 
 Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']
-Input_data = pd.DataFrame([Input_data])
+#Input_data = pd.DataFrame([Input_data])
 Modle = 0 
 list_a = np.arange(len(Input_data))
 # 输入控件
