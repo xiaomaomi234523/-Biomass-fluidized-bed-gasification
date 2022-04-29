@@ -1,12 +1,13 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 from apps import GBDT_app,XGB_app, Adaboost_app, ElasticNet_app, ANN_app, RandomForest_app, SVR_app, home_app, \
     Lasso_app,Ridge_app
 
 
 
 Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']
-list_a = np.arange(10)
+list_a = np.arange(len(Input_data))
 # 输入控件
 st.sidebar.title("请输入反应参数")
 input_mode = st.sidebar.selectbox("",("上传数据文件（注意格式）","单组数据"))
