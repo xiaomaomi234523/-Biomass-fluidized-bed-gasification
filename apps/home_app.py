@@ -102,9 +102,9 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
             input_data = Input_preprocess(Input_data)
             input_predict = model.fit(X_train, y_train).predict(input_data)
             l.append(input_predict)
-        l = pd.DataFrame(l)
+        l = pd..DataFrame.transpose(l)
         st.write(l)
-        st.write(l[:][0])
+        st.write(l[0])
         i = 0
         for target in ["CO", "H2", "CH4", "CO2"]:
             for j in range(0,len(l[:][0])):
