@@ -1,6 +1,6 @@
 import copy
 import streamlit as st
-import panda as pd
+import pandas as pd
 from PIL import Image
 import os,inspect
 from Input_preprocess import Input_preprocess
