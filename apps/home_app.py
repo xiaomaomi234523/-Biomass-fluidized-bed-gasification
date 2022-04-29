@@ -95,7 +95,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         # 以后写个json文件装最优模型
         models = {"CO": AdaBoostRegressor(learning_rate=2, n_estimators=350),"H2":AdaBoostRegressor(learning_rate=2, n_estimators=350),"CH4": AdaBoostRegressor(learning_rate=2, n_estimators=400),"CO2":GradientBoostingRegressor(max_depth=1, min_samples_split=6, n_estimators=200)}
         load_state = st.text('Loading...')
-        st.write(input_data)
+        #st.write(input_data)
         for target in ["CO", "H2", "CH4", "CO2"]:
             X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
             
@@ -112,11 +112,18 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         for target in ["CO", "H2", "CH4", "CO2"]:
             for j in range(0,len(l[0])):
                 dic[target].append(l[i][j] / mean_r[j]/4*100)
-                st.write(target, '[%vol_N2_free]=', l[i][j] / mean_r[j]/4*100, '%')
             i += 1
         #st.write(dic)
+        st.subheader("气体产量预测值依次为：")
         df = pd.DataFrame(dic)
         st.write(df)
+
+        st.download_button(
+            label="Download data as CSV",
+            data=df.to_csv().encode('utf-8'),
+            file_name='PV.csv',
+            mime='text/csv',
+        )
         load_state.text("loading...done")
         
 
