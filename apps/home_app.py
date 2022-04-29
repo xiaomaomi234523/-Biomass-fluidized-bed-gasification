@@ -90,8 +90,6 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         st.subheader("气体产出预测为：")
         input_data = Input_preprocess(Input_data)
         l = []
-        l_T = []
-        l_ER = []
         # 以后写个json文件装最优模型
         models = {"CO": AdaBoostRegressor(learning_rate=2, n_estimators=350),"H2":AdaBoostRegressor(learning_rate=2, n_estimators=350),"CH4": AdaBoostRegressor(learning_rate=2, n_estimators=400),"CO2":GradientBoostingRegressor(max_depth=1, min_samples_split=6, n_estimators=200)}
         load_state = st.text('Loading...')
@@ -104,10 +102,9 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
             input_predict = model.fit(X_train, y_train).predict(input_data)
             l.append(input_predict)
         st.write(l)
-        i = 0
         for target in ["CO", "H2", "CH4", "CO2"]:
+            for i in range(0,len(l))
             st.write(target, '[%vol_N2_free]=', l[i][0] / sum(l)[0] * 100, '%')
-            i += 1
         load_state.text("loading...done")
         
 
