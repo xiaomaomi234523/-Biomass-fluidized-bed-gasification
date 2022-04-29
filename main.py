@@ -7,6 +7,7 @@ from apps import GBDT_app,XGB_app, Adaboost_app, ElasticNet_app, ANN_app, Random
 
 
 Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']
+Input_data = pd.DataFrame([Input_data])
 Modle = 0 
 list_a = np.arange(len(Input_data))
 # 输入控件
@@ -37,6 +38,7 @@ elif input_mode == "单组数据":
         Bed_type = st.sidebar.selectbox("",
             ('bubbling fluidized bed','bubbling fluidized bed'))
         Input_data = [C,H,O,Moisture,Ash,ER,T,SB,Bed_material,Bed_type]
+        Input_data = pd.DataFrame([Input_data])
 
 
 # Once we have the dependencies, add a selector for the app mode on the sidebar.
