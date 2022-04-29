@@ -87,7 +87,9 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
                 i += 1
         load_state.text("loading...done")
     elif Modle == -1:
-        print(0)
+        st.subheader("气体产出预测为：")
+        input_data = Input_preprocess(Input_data)
+        st.write(input_data)
         
 
         st.subheader("试着在侧边栏选择模型调参吧！")
