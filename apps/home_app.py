@@ -114,7 +114,9 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
                 dic[target].append(l[i][j] / mean_r[j]/4*100)
                 st.write(target, '[%vol_N2_free]=', l[i][j] / mean_r[j]/4*100, '%')
             i += 1
-        st.write(dic)
+        #st.write(dic)
+        df = pd.DataFrame(dic)
+        st.write(df)
         load_state.text("loading...done")
         
 
