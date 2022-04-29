@@ -6,6 +6,7 @@ from apps import GBDT_app,XGB_app, Adaboost_app, ElasticNet_app, ANN_app, Random
 
 
 Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']
+list_a = np.arange(len(Input_data))
 # 输入控件
 st.sidebar.title("请输入反应参数")
 input_mode = st.sidebar.selectbox("",("上传数据文件（注意格式）","单组数据"))
@@ -13,7 +14,7 @@ if input_mode == "上传数据文件（注意格式）":
     st.sidebar.subheader('demo暂不支持上传文件，试试单组数据')
     uploaded_file = st.sidebar.file_uploader("上传一个csv文件")
     if uploaded_file is not None:
-        Input_data = pd.read_csv(uploaded_file,header=None)
+        Input_data = pd.read_csv(uploaded_file,header=None,sep=',',usecols=list_a)
         st.write(Input_data)
 elif input_mode == "单组数据":
     C = st.sidebar.slider('C[wt.%dry basis]',0,100,50)
