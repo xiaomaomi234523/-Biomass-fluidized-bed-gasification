@@ -104,7 +104,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         st.write(l)
         i = 0
         for target in ["CO", "H2", "CH4", "CO2"]:
-            for j in range(0,len(l[:][0]))
+            for j in range(0,len(l[:][0])):
                 st.write(target, '[%vol_N2_free]=', l[i][j] / sum(l[:][j])[j] * 100, '%')
             i += 1
         load_state.text("loading...done")
