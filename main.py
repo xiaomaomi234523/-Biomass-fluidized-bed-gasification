@@ -14,10 +14,11 @@ list_a = np.arange(len(Input_data))
 st.sidebar.title("请输入反应参数")
 input_mode = st.sidebar.selectbox("",("上传数据文件（注意格式）","单组数据"))
 if input_mode == "上传数据文件（注意格式）":
-    st.sidebar.subheader('demo暂不支持上传文件，试试单组数据')
+    
     uploaded_file = st.sidebar.file_uploader("上传一个csv文件")
     if uploaded_file is not None:
         Input_data = pd.read_csv(uploaded_file,header=None,sep=',',usecols=list_a)
+        Input_data.drop([0,1],inplace = True)
         Modle = -1
         #st.write(Input_data)
 elif input_mode == "单组数据":
