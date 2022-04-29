@@ -104,7 +104,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
             l.append(input_predict)
         l = pd.DataFrame(l)
         st.write(l)
-        st.write(l[0])
+        st.write(l[:][0])
         i = 0
         for target in ["CO", "H2", "CH4", "CO2"]:
             for j in range(0,len(l[:][0])):
