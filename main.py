@@ -17,7 +17,7 @@ if input_mode == "上传数据文件（注意格式）":
     
     uploaded_file = st.sidebar.file_uploader("上传一个csv文件")
     if uploaded_file is not None:
-        Input_data = pd.read_csv(uploaded_file,header=None,sep=',',usecols=list_a)
+        Input_data = pd.read_csv(uploaded_file,sep=',',usecols=list_a)
         st.write(Input_data)
         Modle = -1
         #st.write(Input_data)
