@@ -89,7 +89,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
     elif Modle == -1:
         st.subheader("气体产出预测为：")
         input_data = Input_preprocess(Input_data)
-        #st.write(input_data)
+        st.write(input_data)
         for target in ["CO", "H2", "CH4", "CO2"]:
             X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
             model = models[target]
