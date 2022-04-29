@@ -9,7 +9,7 @@ from sklearn.svm import SVR
 from sklearn.ensemble import AdaBoostRegressor
 
 
-def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
+def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modle = 0):
     st.title("生物质流化床气化分析预测平台")
 
     # 获取绝对地址（不知道为什么用不了相对地址）
@@ -22,12 +22,10 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
 
     st.image(image, caption='流化床模拟')
 
-    if Input_data == [0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']:
+    if Modle == 0:
         st.subheader("请在侧边栏输入反应参数")
-    else:
-
+    elif Modle ==1:
         st.subheader("气体产出预测为：")
-
         input_data = Input_preprocess(Input_data)
         l = []
         l_T = []
@@ -88,5 +86,8 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
                 st.write(target, '[%vol_N2_free]=', l[i][0] / sum(l)[0] * 100, '%')
                 i += 1
         load_state.text("loading...done")
+    elif Modle == -1:
+        print(0)
+        
 
         st.subheader("试着在侧边栏选择模型调参吧！")
