@@ -114,13 +114,12 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
                 dic[target].append(l[i][j] / mean_r[j]/4*100)
             i += 1
         #st.write(dic)
-        st.subheader("气体产量预测值依次为：")
         df = pd.DataFrame(dic)
         st.write(df)
 
         st.download_button(
             label="Download data as CSV",
-            data=df.to_csv().encode('utf-8'),
+            data=df.to_csv(index = False).encode('utf-8'),
             file_name='PV.csv',
             mime='text/csv',
         )
