@@ -7,6 +7,7 @@ from apps import GBDT_app,XGB_app, Adaboost_app, ElasticNet_app, ANN_app, Random
 
 
 Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']
+Modle = 0 
 list_a = np.arange(len(Input_data))
 # 输入控件
 st.sidebar.title("请输入反应参数")
@@ -16,8 +17,10 @@ if input_mode == "上传数据文件（注意格式）":
     uploaded_file = st.sidebar.file_uploader("上传一个csv文件")
     if uploaded_file is not None:
         Input_data = pd.read_csv(uploaded_file,header=None,sep=',',usecols=list_a)
-        st.write(Input_data)
+        Modle = -1
+        #st.write(Input_data)
 elif input_mode == "单组数据":
+    Modle = 1
     C = st.sidebar.slider('C[wt.%dry basis]',0,100,50)
     H = st.sidebar.slider('H[wt.%dry basis]',0,100,6)
     O = st.sidebar.slider('O[wt.%dry basis]',0,100,44)
@@ -40,7 +43,7 @@ elif input_mode == "单组数据":
 st.sidebar.title("选择页面")
 app_mode = st.sidebar.selectbox("",("home","Lasso","SVR","ANN","XGboost","Ridge", "ElasticNet","GBDT","RandomForest","Adaboost"))
 if app_mode == "home":
-    home_app.run(Input_data=Input_data)
+    home_app.run(Input_data=Input_data,Modle = Modle)
     st.sidebar.success('请选择模型并试着调参吧!".')
 elif app_mode == "ANN":
     ANN_app.run(Input_data=Input_data)
