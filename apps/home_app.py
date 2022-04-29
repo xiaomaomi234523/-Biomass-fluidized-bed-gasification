@@ -91,15 +91,15 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         input_data = Input_preprocess(Input_data)
         #st.write(input_data)
         for target in ["CO", "H2", "CH4", "CO2"]:
-                X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
-                model = models[target]
-                input_data = Input_preprocess(Input_data)
-                input_predict = model.fit(X_train, y_train).predict(input_data)
-                l.append(input_predict)
-            i = 0
-            for target in ["CO", "H2", "CH4", "CO2"]:
-                st.write(target, '[%vol_N2_free]=', l[i][0] / sum(l)[0] * 100, '%')
-                i += 1
+            X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
+            model = models[target]
+            input_data = Input_preprocess(Input_data)
+            input_predict = model.fit(X_train, y_train).predict(input_data)
+            l.append(input_predict)
+        i = 0
+        for target in ["CO", "H2", "CH4", "CO2"]:
+            st.write(target, '[%vol_N2_free]=', l[i][0] / sum(l)[0] * 100, '%')
+            i += 1
         load_state.text("loading...done")
         
 
