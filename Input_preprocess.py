@@ -10,7 +10,7 @@ def Input_preprocess(Input_data):
     pd.set_option('display.max_columns', None)
     pd.set_option('display.max_rows', None)
     #  独热编码
-    # Input_data = pd.DataFrame([Input_data])
+    Input_data = pd.DataFrame([Input_data])
     c = ['GY', 'CH4', 'CO2', 'CO', 'H2']
     train_data = load_csv('train_data.csv')
     test_data = load_csv('test_data.csv')
