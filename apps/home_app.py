@@ -105,12 +105,12 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         l = pd.DataFrame(l).T
         st.write(l)
         mean_r = l.mean(axis=1)
-        st.write(mean_r)
+        #st.write(mean_r)
         #st.write(l[0][1])
         i = 0
         for target in ["CO", "H2", "CH4", "CO2"]:
             for j in range(0,len(l[0])):
-                st.write(target, '[%vol_N2_free]=', l[i][j] / sum(l[:][j])[j] * 100, '%')
+                st.write(target, '[%vol_N2_free]=', l[i][j] / mean_r[j], '%')
             i += 1
         load_state.text("loading...done")
         
