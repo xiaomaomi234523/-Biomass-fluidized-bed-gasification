@@ -60,7 +60,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         layout=go.Layout(
         title='产气比例图'
         )
-        fig=go.Figure(data=trace,layout=layout，autosize=False,width=1450,height=800)
+        fig=go.Figure(data=trace,layout=layout)
         st.plotly_chart(fig, use_container_width=True)
         
         
