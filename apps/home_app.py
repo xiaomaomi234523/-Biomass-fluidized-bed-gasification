@@ -136,7 +136,9 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         #st.write(dic)
         df = pd.DataFrame(dic)
         st.write(df)
-        fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species")    
+        fig = px.line(df, x=Null, y=["CO", "H2", "CH4", "CO2"], color="continent", line_group="country", hover_name="country",
+        line_shape="spline", render_mode="svg") 
+        st.plotly_chart(fig, use_container_width=True)
         st.download_button(
             label="Download data as CSV",
             data=df.to_csv(index = False).encode('utf-8'),
