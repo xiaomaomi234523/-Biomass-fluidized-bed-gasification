@@ -10,7 +10,7 @@ from Input_preprocess import Input_preprocess
 
 
 
-def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
+def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modle = 0):
     st.title('ANN')
     class Act_fun(nn.Module):
         def __init__(self):
