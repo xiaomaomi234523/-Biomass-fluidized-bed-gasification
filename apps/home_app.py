@@ -150,6 +150,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         fig.add_trace(go.Scatter(x=x, y=y3,
                             mode='lines+markers', name='CO2[%vol_N2_free]'))
         st.plotly_chart(fig, use_container_width=True)
+        st.write("预测结果下载：")
         st.download_button(
             label="Download data as CSV",
             data=df.to_csv(index = False).encode('utf-8'),
