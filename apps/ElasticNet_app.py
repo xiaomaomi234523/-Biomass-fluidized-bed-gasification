@@ -5,7 +5,7 @@ from plot_learning_curve import Plot_learning_curve
 import numpy as np
 from Input_preprocess import Input_preprocess
 from Input_preprocess import Input_preprocess
-def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
+def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modle = 0):
     st.subheader('ElasticNet')
 
     # 控件
