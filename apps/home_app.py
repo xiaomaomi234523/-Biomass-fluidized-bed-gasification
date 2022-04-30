@@ -15,6 +15,7 @@ from sklearn.ensemble import AdaBoostRegressor
 
 
 def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modle = 0):
+    Input_data = pd.DataFrame(Input_data)
     st.title("生物质流化床气化分析预测平台")
 
     # 获取绝对地址（不知道为什么用不了相对地址）
