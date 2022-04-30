@@ -5,6 +5,7 @@ from PIL import Image
 import os,inspect
 import plotly as py
 import plotly.graph_objs as go
+import plotly.express as ex
 from Input_preprocess import Input_preprocess
 from sklearn.ensemble import GradientBoostingRegressor
 from load_data import load_all
@@ -38,7 +39,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         load_state = st.text('Loading...')
         
      
-        values = []
+        values = {"CO":[],"H2":[],"CH4":[],"CO2":[]}
         for target in ["CO", "H2", "CH4", "CO2"]:
             X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
             model = models[target]
@@ -47,16 +48,20 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
             l.append(input_predict)
         i = 0
         for target in ["CO", "H2", "CH4", "CO2"]:
-            values.append(l[i][0] / sum(l)[0] * 100)
+            values[target].append(l[i][0] / sum(l)[0] * 100)
             #st.write(target, '[%vol_N2_free]=', l[i][0] / sum(l)[0] * 100, '%')
             i += 1
-        pyplt=py.offline.plot
-        labels=['CO[%vol_N2_free]','H2[%vol_N2_free]','CH4[%vol_N2_free]','CO2[%vol_N2_free]']
-        trace=[go.Pie(labels=labels,values=values)]
-        layout=go.Layout(
-        title='产气比例图'
-        )
-        fig=go.Figure(data=trace,layout=layout)
+        values = pd.DataFrame(values)
+        st.write(values)
+        #pyplt=py.offline.plot
+        #labels=['CO[%vol_N2_free]','H2[%vol_N2_free]','CH4[%vol_N2_free]','CO2[%vol_N2_free]']
+        fig = px.bar_polar(values, r="frequency", theta="direction", color="strength", template="plotly_dark",
+            color_discrete_sequence= px.colors.sequential.Plasma_r)
+        #trace=[go.Pie(labels=labels,values=values)]
+        #layout=go.Layout(
+        #title='产气比例图'
+        #)
+        #fig=go.Figure(data=trace,layout=layout)
         st.plotly_chart(fig, use_container_width=True)
         
         
