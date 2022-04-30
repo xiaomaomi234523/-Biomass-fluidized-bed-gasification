@@ -6,7 +6,7 @@ import numpy as np
 from Input_preprocess import Input_preprocess
 
 
-def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
+def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modle = 0):
     st.title('Adaboost')
 
     # 控件
@@ -44,11 +44,23 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
 
     #  根据输入数据预测
 
-    if Input_data != [0, 0, 0, 0, 0, 0, 0, 0, 'Silica_sand', 'bubbling fluidized bed']:
-        #  根据输入数据预测
+    if Modle == 0:
+        st.subheader("请在侧边栏输入反应参数")
+    elif Modle == 1:
         input_data = Input_preprocess(Input_data)
         input_predict = model.fit(X_train, y_train).predict(input_data)
-        st.subheader('**预测值**')
+        st.subheader('气体产出预测为：')
         st.write(target, '[%vol_N2_free]=', input_predict[0])
-    else:
-        st.subheader('**请在侧边栏上传文件或输入数据**')
+    elif Modle ==-1:
+        st.subheader("气体产出预测为：")
+        input_data = Input_preprocess(Input_data)
+        l = []
+        load_state = st.text('Loading...')
+        #st.write(input_data)
+        input_data = Input_preprocess(Input_data)
+        input_predict = model.fit(X_train, y_train).predict(input_data)
+        l.append(input_predict)
+        l = pd.DataFrame(l).T
+        dic = {target+"[%vol_N2_free]":l[0]}
+        df = pd.DataFrame(dic)
+        st.write(df)
