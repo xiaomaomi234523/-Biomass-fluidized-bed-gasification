@@ -60,12 +60,13 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
     elif Modle ==-1:
         st.subheader("气体产出预测为：")
         input_data = Input_preprocess(Input_data)
-        dic = {target:[]}
+        l = []
         load_state = st.text('Loading...')
         #st.write(input_data)
         input_data = Input_preprocess(Input_data)
         input_predict = model.fit(X_train, y_train).predict(input_data)
-        dic[target].append(input_predict[0])
+        l.append(input_predict)
+        dic = {target:l}
         st.write(dic)
         df = pd.DataFrame(dic)
         st.write(df)
