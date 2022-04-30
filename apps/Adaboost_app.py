@@ -3,7 +3,7 @@ import streamlit as st
 from load_data import load_all
 from plot_learning_curve import Plot_learning_curve
 import numpy as np
-import pandas as pd
+
 from Input_preprocess import Input_preprocess
 
 
@@ -44,7 +44,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
     st.write("平均绝对百分误差",test_mape)
 
     #  根据输入数据预测
-
+    import pandas as pd
     if Modle == 0:
         st.subheader("请在侧边栏输入反应参数")
     elif Modle == 1:
