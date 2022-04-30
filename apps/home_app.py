@@ -51,8 +51,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
             values[target].append(l[i][0] / sum(l)[0] * 100)
             #st.write(target, '[%vol_N2_free]=', l[i][0] / sum(l)[0] * 100, '%')
             i += 1
-        #values = pd.DataFrame(values)
-        st.write(values)
+        values = pd.DataFrame(values)
         pyplt=py.offline.plot
         labels=['CO[%vol_N2_free]','H2[%vol_N2_free]','CH4[%vol_N2_free]','CO2[%vol_N2_free]']
         
@@ -136,8 +135,23 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         #st.write(dic)
         df = pd.DataFrame(dic)
         st.write(df)
-        fig = px.line(df, x=Null, y=["CO", "H2", "CH4", "CO2"], color="continent", line_group="country", hover_name="country",
-        line_shape="spline", render_mode="svg") 
+        x = np.arrange(len(df))
+        y0 = np.array(dic["CO"])
+        y1 = np.array(dic["H2"])
+        y2 = np.array(dic["CH4"])
+        y3 = np.array(dic["CO2"])
+        # Create traces
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(x=random_x, y=y0,
+                            mode='lines+markers',
+                            name='lines+markers'))
+        fig.add_trace(go.Scatter(x=random_x, y=y1,
+                            mode='lines+markers',
+                            name='lines+markers'))
+        fig.add_trace(go.Scatter(x=random_x, y=y2,
+                            mode='lines+markerss', name='lines+markers'))
+        fig.add_trace(go.Scatter(x=random_x, y=y3,
+                            mode='lines+markerss', name='lines+markers'))
         st.plotly_chart(fig, use_container_width=True)
         st.download_button(
             label="Download data as CSV",
