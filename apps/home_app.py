@@ -135,7 +135,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         #st.write(dic)
         df = pd.DataFrame(dic)
         st.write(df)
-        x = np.arrange(len(df))
+        x = np.array(range(len(df)))
         y0 = np.array(dic["CO"])
         y1 = np.array(dic["H2"])
         y2 = np.array(dic["CH4"])
