@@ -41,7 +41,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         input_data = Input_preprocess(Input_data)
         input_predict = model.fit(X_train, y_train).predict(input_data)
         st.subheader('气体产出预测为：')
-        st.write(target, '[%vol_N2_free]=', input_predict[0])
+        st.write(target, '[%vol_N2_free]=', input_predict[0][0])
     elif Modle ==-1:
         st.subheader("气体产出预测为：")
         input_data = Input_preprocess(Input_data)
