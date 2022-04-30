@@ -65,7 +65,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         #st.write(input_data)
         input_data = Input_preprocess(Input_data)
         input_predict = model.fit(X_train, y_train).predict(input_data)
-        dic[target].append(input_predict)
+        dic[target].append(input_predict[0])
         st.write(dic)
         df = pd.DataFrame(dic)
         st.write(df)
