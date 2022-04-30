@@ -51,7 +51,6 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
 
     #  根据输入数据预测
     import pandas as pd
-    load_state = st.text('Loading...')
     if Modle == 0:
         st.subheader("请在侧边栏输入反应参数")
     elif Modle == 1:
@@ -61,6 +60,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         st.write(target, '[%vol_N2_free]=', input_predict[0])
     elif Modle ==-1:
         st.subheader("气体产出预测为：")
+        load_state = st.text('Loading...')
         input_data = Input_preprocess(Input_data)
         l = []
         #st.write(input_data)
@@ -71,4 +71,4 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         dic = {target+"[%vol_N2_free]":l[0]}
         df = pd.DataFrame(dic)
         st.write(df)
-    load_state.text("loading...done")
+        load_state.text("loading...done")
