@@ -135,7 +135,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
             i += 1
         #st.write(dic)
         df = pd.DataFrame(dic)
-        st.write(df)
+        #st.write(df)
         x = np.array(range(len(df)))
         y0 = np.array(dic["CO"])
         y1 = np.array(dic["H2"])
@@ -145,14 +145,14 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         fig = go.Figure()
         fig.add_trace(go.Scatter(x=x, y=y0,
                             mode='lines+markers',
-                            name='lines+markers'))
+                            name='CO[%vol_N2_free]'))
         fig.add_trace(go.Scatter(x=x, y=y1,
                             mode='lines+markers',
-                            name='lines+markers'))
+                            name='H2[%vol_N2_free]'))
         fig.add_trace(go.Scatter(x=x, y=y2,
-                            mode='lines+markers', name='lines+markers'))
+                            mode='lines+markers', name='CH4[%vol_N2_free]'))
         fig.add_trace(go.Scatter(x=x, y=y3,
-                            mode='lines+markers', name='lines+markers'))
+                            mode='lines+markers', name='CO2[%vol_N2_free]'))
         st.plotly_chart(fig, use_container_width=True)
         st.download_button(
             label="Download data as CSV",
