@@ -71,3 +71,4 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         dic = {target+"[%vol_N2_free]":l[0]}
         df = pd.DataFrame(dic)
         st.write(df)
+    load_state.text("loading...done")
