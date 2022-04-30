@@ -52,8 +52,8 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         input_data = Input_preprocess(Input_data)
         input_predict = model.fit(X_train, y_train).predict(input_data)
         l.append(input_predict)
-        l = pd.DataFrame(l).T
-        dic = {target+"[%vol_N2_free]":l[0][0]}
+        l = pd.DataFrame(l[0]).T
+        dic = {target+"[%vol_N2_free]":l[0]}
         df = pd.DataFrame(dic)
         st.write(df)
         load_state.text("loading...done")
