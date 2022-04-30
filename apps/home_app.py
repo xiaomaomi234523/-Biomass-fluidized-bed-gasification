@@ -142,15 +142,15 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         y3 = np.array(dic["CO2"])
         # Create traces
         fig = go.Figure()
-        fig.add_trace(go.Scatter(x=random_x, y=y0,
+        fig.add_trace(go.Scatter(x=x, y=y0,
                             mode='lines+markers',
                             name='lines+markers'))
-        fig.add_trace(go.Scatter(x=random_x, y=y1,
+        fig.add_trace(go.Scatter(x=x, y=y1,
                             mode='lines+markers',
                             name='lines+markers'))
-        fig.add_trace(go.Scatter(x=random_x, y=y2,
+        fig.add_trace(go.Scatter(x=x, y=y2,
                             mode='lines+markerss', name='lines+markers'))
-        fig.add_trace(go.Scatter(x=random_x, y=y3,
+        fig.add_trace(go.Scatter(x=x, y=y3,
                             mode='lines+markerss', name='lines+markers'))
         st.plotly_chart(fig, use_container_width=True)
         st.download_button(
