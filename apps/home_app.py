@@ -3,6 +3,8 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 import os,inspect
+import plotly as py
+import plotly.graph_objs as go
 from Input_preprocess import Input_preprocess
 from sklearn.ensemble import GradientBoostingRegressor
 from load_data import load_all
@@ -76,6 +78,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
                 i+=1
 
         else:
+            values = []
             for target in ["CO", "H2", "CH4", "CO2"]:
                 X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
                 model = models[target]
@@ -84,8 +87,18 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
                 l.append(input_predict)
             i = 0
             for target in ["CO", "H2", "CH4", "CO2"]:
-                st.write(target, '[%vol_N2_free]=', l[i][0] / sum(l)[0] * 100, '%')
+                values.append(l[i][0] / sum(l)[0] * 100)
+                #st.write(target, '[%vol_N2_free]=', l[i][0] / sum(l)[0] * 100, '%')
                 i += 1
+            pyplt=py.offline.plot
+            labels=['CO[%vol_N2_free]','H2[%vol_N2_free]','CH4[%vol_N2_free]','CO2[%vol_N2_free]']
+            trace=[go.Pie(labels=labels,values=values)]
+            layout=go.Layout(
+            title='产气比例图'
+            )
+            fig=go.Figure(data=trace,layout=layout)
+            st.plotly_chart(fig, use_container_width=True)
+
         load_state.text("loading...done")
     elif Modle == -1:
         st.subheader("气体产出预测为：")
