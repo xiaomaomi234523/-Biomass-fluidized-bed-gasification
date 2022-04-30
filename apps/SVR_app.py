@@ -3,7 +3,7 @@ from load_data import load_all
 from sklearn.svm import SVR
 from plot_learning_curve import Plot_learning_curve
 import numpy as np
-import pandas as pd
+
 from Input_preprocess import Input_preprocess
 
 
@@ -50,7 +50,8 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
     st.write("平均绝对百分误差", test_mape)
 
     #  根据输入数据预测
-    
+    import pandas as pd
+    load_state = st.text('Loading...')
     if Modle == 0:
         st.subheader("请在侧边栏输入反应参数")
     elif Modle == 1:
@@ -62,7 +63,6 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         st.subheader("气体产出预测为：")
         input_data = Input_preprocess(Input_data)
         l = []
-        load_state = st.text('Loading...')
         #st.write(input_data)
         input_data = Input_preprocess(Input_data)
         input_predict = model.fit(X_train, y_train).predict(input_data)
