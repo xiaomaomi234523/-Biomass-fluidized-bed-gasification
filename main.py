@@ -38,7 +38,7 @@ elif input_mode == "单组数据":
         Bed_type = st.sidebar.selectbox("",
             ('bubbling fluidized bed','bubbling fluidized bed'))
         Input_data = [C,H,O,Moisture,Ash,ER,T,SB,Bed_material,Bed_type]
-        #Input_data = pd.DataFrame([Input_data])
+        Input_data = pd.DataFrame([Input_data])
 
 
 # Once we have the dependencies, add a selector for the app mode on the sidebar.
@@ -48,23 +48,23 @@ if app_mode == "home":
     home_app.run(Input_data=Input_data,Modle = Modle)
     st.sidebar.success('请选择模型并试着调参吧!".')
 elif app_mode == "ANN":
-    ANN_app.run(Input_data=Input_data)
+    ANN_app.run(Input_data=Input_data,Modle = Modle)
 elif app_mode == "Lasso":
-    Lasso_app.run(Input_data=Input_data)
+    Lasso_app.run(Input_data=Input_data,Modle = Modle)
 elif app_mode == "ElasticNet":
-    ElasticNet_app.run(Input_data=Input_data)
+    ElasticNet_app.run(Input_data=Input_data,Modle = Modle)
 elif app_mode == "SVR":
-    SVR_app.run(Input_data=Input_data)
+    SVR_app.run(Input_data=Input_data,Modle = Modle)
 elif app_mode == "GBDT":
-    GBDT_app.run(Input_data=Input_data)
+    GBDT_app.run(Input_data=Input_data,Modle = Modle)
 elif app_mode == "XGboost":
-    XGB_app.run(Input_data=Input_data)
+    XGB_app.run(Input_data=Input_data,Modle = Modle)
 elif app_mode == "RandomForest":
-    RandomForest_app.run(Input_data=Input_data)
+    RandomForest_app.run(Input_data=Input_data,Modle = Modle)
 elif app_mode == "Adaboost":
-    Adaboost_app.run(Input_data=Input_data)
+    Adaboost_app.run(Input_data=Input_data,Modle = Modle)
 elif app_mode == "Ridge":
-    Ridge_app.run(Input_data=Input_data)
+    Ridge_app.run(Input_data=Input_data,Modle = Modle)
 
 
 for i in range(20):
