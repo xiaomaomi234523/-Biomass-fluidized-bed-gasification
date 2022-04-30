@@ -51,17 +51,16 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
             values[target].append(l[i][0] / sum(l)[0] * 100)
             #st.write(target, '[%vol_N2_free]=', l[i][0] / sum(l)[0] * 100, '%')
             i += 1
-        values = pd.DataFrame(values)
+        #values = pd.DataFrame(values)
         st.write(values)
-        #pyplt=py.offline.plot
-        #labels=['CO[%vol_N2_free]','H2[%vol_N2_free]','CH4[%vol_N2_free]','CO2[%vol_N2_free]']
-        fig = px.bar_polar(values, r="frequency", theta="direction", color="strength", template="plotly_dark",
-            color_discrete_sequence= px.colors.sequential.Plasma_r)
-        #trace=[go.Pie(labels=labels,values=values)]
-        #layout=go.Layout(
-        #title='产气比例图'
-        #)
-        #fig=go.Figure(data=trace,layout=layout)
+        pyplt=py.offline.plot
+        labels=['CO[%vol_N2_free]','H2[%vol_N2_free]','CH4[%vol_N2_free]','CO2[%vol_N2_free]']
+        
+        trace=[go.Pie(labels=labels,values=values)]
+        layout=go.Layout(
+        title='产气比例图'
+        )
+        fig=go.Figure(data=trace,layout=layout)
         st.plotly_chart(fig, use_container_width=True)
         
         
@@ -137,7 +136,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         #st.write(dic)
         df = pd.DataFrame(dic)
         st.write(df)
-
+        fig = px.scatter(df, x="sepal_width", y="sepal_length", color="species")    
         st.download_button(
             label="Download data as CSV",
             data=df.to_csv(index = False).encode('utf-8'),
