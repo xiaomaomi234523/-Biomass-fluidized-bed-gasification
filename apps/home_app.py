@@ -6,6 +6,7 @@ from PIL import Image
 import os,inspect
 import plotly as py
 import plotly.graph_objs as go
+import plotly.express as px 
 from Input_preprocess import Input_preprocess
 from sklearn.ensemble import GradientBoostingRegressor
 from load_data import load_all
@@ -39,7 +40,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         load_state = st.text('Loading...')
         
      
-        values = {"CO":[],"H2":[],"CH4":[],"CO2":[]}
+        values = []
         for target in ["CO", "H2", "CH4", "CO2"]:
             X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
             model = models[target]
@@ -48,10 +49,10 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
             l.append(input_predict)
         i = 0
         for target in ["CO", "H2", "CH4", "CO2"]:
-            values[target].append(l[i][0] / sum(l)[0] * 100)
+            values.append(l[i][0] / sum(l)[0] * 100)
             #st.write(target, '[%vol_N2_free]=', l[i][0] / sum(l)[0] * 100, '%')
             i += 1
-        values = pd.DataFrame(values)
+        
         pyplt=py.offline.plot
         labels=['CO[%vol_N2_free]','H2[%vol_N2_free]','CH4[%vol_N2_free]','CO2[%vol_N2_free]']
         
@@ -59,7 +60,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         layout=go.Layout(
         title='产气比例图'
         )
-        fig=go.Figure(data=trace,layout=layout)
+        fig=go.Figure(data=trace,layout=layout，autosize=False,width=1450,height=800)
         st.plotly_chart(fig, use_container_width=True)
         
         
