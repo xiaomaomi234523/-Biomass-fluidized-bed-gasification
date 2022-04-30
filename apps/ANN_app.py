@@ -81,13 +81,36 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']):
     test_mape = np.mean(abs((y_test.reshape(-1) - test_predict)/y_test.reshape(-1)) * 100 / y_test.shape[1])  # 平均绝对百分误差
     test_rmse = (np.mean((y_test.reshape(-1) - test_predict) ** 2))**0.5
     st.write('测试集均方根误差：',test_rmse, '测试集平均绝对百分误差：',test_mape,"%")
-    if Input_data != [0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']:
-        #  根据输入数据预测
+#     if Input_data != [0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed']:
+#         #  根据输入数据预测
+#         input_predict = my_nn(torch.tensor(Input_preprocess(Input_data), dtype=torch.float)).data.numpy().reshape(-1)
+#         st.subheader('**预测值**')
+#         st.write(target,'[%vol_N2_free]=',input_predict[0])
+#     else:
+#         st.subheader('**请在侧边栏上传文件或输入数据**')
+    
+    
+    import pandas as pd
+    if Modle == 0:
+        st.subheader("请在侧边栏输入反应参数")
+    elif Modle == 1:
         input_predict = my_nn(torch.tensor(Input_preprocess(Input_data), dtype=torch.float)).data.numpy().reshape(-1)
-        st.subheader('**预测值**')
-        st.write(target,'[%vol_N2_free]=',input_predict[0])
-    else:
-        st.subheader('**请在侧边栏上传文件或输入数据**')
+        st.subheader('气体产出预测为：')
+        st.write(target, '[%vol_N2_free]=', input_predict[0])
+    elif Modle ==-1:
+        st.subheader("气体产出预测为：")
+        load_state = st.text('Loading...')
+        input_data = Input_preprocess(Input_data)
+        l = []
+        #st.write(input_data)
+        input_data = Input_preprocess(Input_data)
+        input_predict = my_nn(torch.tensor(Input_preprocess(Input_data), dtype=torch.float)).data.numpy().reshape(-1)
+        l.append(input_predict)
+        l = pd.DataFrame(l).T
+        dic = {target+"[%vol_N2_free]":l[0]}
+        df = pd.DataFrame(dic)
+        st.write(df)
+        load_state.text("loading...done")
 
 
 
