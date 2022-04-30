@@ -3,6 +3,7 @@ import streamlit as st
 from load_data import load_all
 from plot_learning_curve import Plot_learning_curve
 import numpy as np
+import pandas as pd
 from Input_preprocess import Input_preprocess
 
 
