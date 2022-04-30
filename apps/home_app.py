@@ -5,7 +5,7 @@ from PIL import Image
 import os,inspect
 import plotly as py
 import plotly.graph_objs as go
-import plotly.express as ex
+import plotly.express as px
 from Input_preprocess import Input_preprocess
 from sklearn.ensemble import GradientBoostingRegressor
 from load_data import load_all
