@@ -69,6 +69,5 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         l.append(input_predict)
         l = pd.DataFrame(l).T
         dic = {target+"[%vol_N2_free]":l[0]}
-        st.write(dic)
         df = pd.DataFrame(dic)
         st.write(df)
