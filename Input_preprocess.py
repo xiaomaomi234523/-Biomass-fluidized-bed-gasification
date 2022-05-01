@@ -22,10 +22,10 @@ def Input_preprocess(Input_data):
     #  插进去，一起独热编码
     X_data = pd.concat([X_data,Input_data])
     X_data = pd.get_dummies(X_data)
-    st.write(X_data)
+    #st.write(X_data)
     #再拆出来
     input_data = X_data[-len(Input_data):]
-    st.write(input_data)
+    #st.write(input_data)
 
 
 
@@ -36,7 +36,8 @@ def Input_preprocess(Input_data):
     train_data = data.head(l1)
     test_data = data.tail(l2)
     test_data = pd.concat([test_data,input_data])
-
+    st.write(train_data)
+    st.write(test_data)
     #  归一化
     from sklearn import preprocessing
 
