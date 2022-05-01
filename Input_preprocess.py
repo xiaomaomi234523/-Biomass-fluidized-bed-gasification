@@ -37,6 +37,7 @@ def Input_preprocess(Input_data):
     l2 = data.shape[0] - l1
     train_data = data.head(l1)
     test_data = data.tail(l2)
+    st.write(l1,l2)
     test_data = pd.concat([test_data,input_data])
     st.write(train_data)
     st.write(test_data)
