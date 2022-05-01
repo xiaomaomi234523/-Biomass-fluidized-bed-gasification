@@ -1,0 +1,214 @@
+C,H,O,Moisture,Ash,ER,T,Steam/Biomass,Bed_material,床型,GY
+50,5.7,44.1,23.5,0.85,0.32,800,0,Silica sand,bubbling fluidised bed,2.3
+50,5.7,44.1,21,0.85,0.37,800,0,Silica sand,bubbling fluidised bed,2.5
+50,5.7,44.1,23,0.85,0.47,810,0,Silica sand,bubbling fluidised bed,2.5
+50,5.7,44.1,25,0.85,0.36,790,0,Silica sand,bubbling fluidised bed,2.4
+50,5.7,44.1,19,0.85,0.32,800,0,Silica sand,bubbling fluidised bed,2.1
+45.89,5.64,47.18,8.5,1.1,0.32,750,0,Silica sand,fluidised bed,1.89
+45.89,5.64,47.18,8.5,1.1,0.36,777,0,Silica sand,fluidised bed,2.18
+45.89,5.64,47.18,8.5,1.1,0.41,808,0,Silica sand,fluidised bed,2.37
+45.89,5.64,47.18,8.5,1.1,0.43,834,0,Silica sand,fluidised bed,2.49
+50.54,7.08,41.11,8,0.55,0.22,700,2.7,Silica sand,fluidised bed,1.56
+50.54,7.08,41.11,8,0.55,0.22,750,2.7,Silica sand,fluidised bed,1.65
+50.54,7.08,41.11,8,0.55,0.22,850,2.7,Silica sand,fluidised bed,2.68
+50.54,7.08,41.11,8,0.55,0.22,900,2.7,Silica sand,fluidised bed,2.77
+50.54,7.08,41.11,8,0.55,0.19,800,1.56,Silica sand,fluidised bed,2.33
+50.54,7.08,41.11,8,0.55,0.21,800,1.56,Silica sand,fluidised bed,2.46
+50.54,7.08,41.11,8,0.55,0.25,800,1.56,Silica sand,fluidised bed,2.38
+50.54,7.08,41.11,8,0.55,0.27,800,1.56,Silica sand,fluidised bed,2.05
+50.54,7.08,41.11,8,0.55,0.22,800,0,Silica sand,fluidised bed,1.6
+50.54,7.08,41.11,8,0.55,0.22,800,1.35,Silica sand,fluidised bed,2.61
+50.54,7.08,41.11,8,0.55,0.22,800,2.7,Silica sand,fluidised bed,2.44
+50.54,7.08,41.11,8,0.55,0.22,800,4.04,Silica sand,fluidised bed,2.13
+49.47,5.79,41.94,6.28,0.71,0.19,780,0,Ofite,fluidised bed,1.17
+49.47,5.79,41.94,6.28,0.71,0.23,752,0.18,Ofite,fluidised bed,1.42
+49.47,5.79,41.94,6.28,0.71,0.27,805,0,Ofite,fluidised bed,1.53
+49.47,5.79,41.94,6.28,0.71,0.27,786,0.23,Ofite,fluidised bed,1.86
+49.47,5.79,41.94,6.28,0.71,0.27,755,0.43,Ofite,fluidised bed,1.9
+49.47,5.79,41.94,6.28,0.71,0.35,812,0,Ofite,fluidised bed,2.18
+49.47,5.79,41.94,6.28,0.71,0.33,789,0.45,Ofite,fluidised bed,2.5
+49.47,5.79,41.94,6.28,0.71,0.24,785,0,Ofite,fluidised bed,1.75
+49.47,5.79,41.94,6.28,0.71,0.3,808,0,Ofite,fluidised bed,2.1
+49.47,5.79,41.94,6.28,0.71,0.36,813,0,Ofite,fluidised bed,2.3
+45.04,6.4,21.58,6.91,18.87,0.35,850,0,Ofite,fluidised bed,2.74
+45.04,6.4,21.58,6.91,18.87,0.31,843,0,Ofite,fluidised bed,2.46
+45.04,6.4,21.58,6.91,18.87,0.29,832,0,Ofite,fluidised bed,2.39
+45.04,6.4,21.58,6.91,18.87,0.25,808,0,Ofite,fluidised bed,2.16
+46.4,5.33,32.13,8.66,14.21,0.23,770,0,Ofite,fluidised bed,2.15
+30.88,4.36,15.61,8.65,43.15,0.3,840,0,Ofite,fluidised bed,2.49
+45.1,5.3,26.13,22.1,17.55,0.18,700,0,Silica sand,bubbling fluidised bed,0.23
+45.1,5.3,26.13,22.1,17.55,0.22,700,0,Silica sand,bubbling fluidised bed,0.45
+45.1,5.3,26.13,22.1,17.55,0.3,700,0.24,Silica sand,bubbling fluidised bed,0.73
+42.68,3.3,31.72,9.95,21.68,0.35,750,0.5,Silica sand,fluidised bed,1.92
+42.68,3.3,31.72,9.95,21.68,0.3,800,0.5,Silica sand,fluidised bed,1.96
+42.68,3.3,31.72,9.95,21.68,0.35,800,0.2,Silica sand,fluidised bed,2.07
+42.68,3.3,31.72,9.95,21.68,0.4,800,0.5,Silica sand,fluidised bed,2.29
+42.68,3.3,31.72,9.95,21.68,0.35,850,0.5,Silica sand,fluidised bed,2.31
+42.68,3.3,31.72,9.95,21.68,0.35,800,0.8,Silica sand,fluidised bed,2.13
+42.68,3.3,31.72,9.95,21.68,0.35,850,0.8,Silica sand,fluidised bed,2.34
+46.26,6.68,25.34,6.4,20.78,0.26,852,0,Olivine,bubbling fluidised bed,2.33
+46.26,6.68,25.34,6.4,20.78,0.27,869,0,Olivine,bubbling fluidised bed,2.32
+46.26,6.68,25.34,6.4,20.78,0.3,879,0,Olivine,bubbling fluidised bed,2.58
+46.26,6.68,25.34,6.4,20.78,0.32,898,0,Olivine,bubbling fluidised bed,2.75
+47.2,6.2,39.7,7.8,4.88,0.25,650,0,Silica sand,fluidised bed,1.52
+47.2,6.2,39.7,7.8,4.88,0.25,750,0,Silica sand,fluidised bed,1.66
+47.2,6.2,39.7,7.8,4.88,0.25,850,0,Silica sand,fluidised bed,1.93
+47.2,6.2,39.7,7.8,4.88,0.25,950,0,Silica sand,fluidised bed,2.19
+47.2,6.2,39.7,7.8,4.88,0.17,770,0,Silica sand,fluidised bed,1.37
+47.2,6.2,39.7,7.8,4.88,0.21,770,0,Silica sand,fluidised bed,1.54
+47.2,6.2,39.7,7.8,4.88,0.28,770,0,Silica sand,fluidised bed,1.85
+47.2,6.2,39.7,7.8,4.88,0.32,770,0,Silica sand,fluidised bed,2.02
+52.65,6.83,35.68,14.6,0.47,0.25,750,0,Silica sand,fluidised bed,2.02
+52.65,6.83,35.68,14.6,0.47,0.25,850,0,Silica sand,fluidised bed,2.09
+52.65,6.83,35.68,14.6,0.47,0.25,950,0,Silica sand,fluidised bed,2.15
+52.65,6.83,35.68,14.6,0.47,0.25,1050,0,Silica sand,fluidised bed,2.34
+85.17,13.83,0,0.2,1,0.31,898,0,Silica sand,bubbling fluidised bed,4.4
+85.17,13.83,0,0.2,1,0.2,845,0,Silica sand,bubbling fluidised bed,3
+85.17,13.83,0,0.2,1,0.27,807,0,Olivine,bubbling fluidised bed,5.49
+85.17,13.83,0,0.2,1,0.2,819,0,Olivine,bubbling fluidised bed,4.22
+85.17,13.83,0,0.2,1,0.31,825,0,Olivine,bubbling fluidised bed,6.07
+85.17,13.83,0,0.2,1,0.21,825,0,Olivine,bubbling fluidised bed,4.86
+85.17,13.83,0,0.2,1,0.29,850,0,Olivine,bubbling fluidised bed,6.26
+84.65,14.04,0,0.3,1.3,0.23,818,0,Olivine,bubbling fluidised bed,4.98
+84.65,14.04,0,0.3,1.3,0.24,829,0,Olivine,bubbling fluidised bed,5.23
+68.51,10.26,14.39,0.6,6.74,0.31,914,0,Olivine,bubbling fluidised bed,3.58
+68.51,10.26,14.39,0.6,6.74,0.25,884,0,Olivine,bubbling fluidised bed,3.28
+68.51,10.26,14.39,0.6,6.74,0.22,869,0,Olivine,bubbling fluidised bed,2.86
+80.06,13.19,4.53,0.7,1.91,0.24,890,0,Olivine,bubbling fluidised bed,3.6
+57.1,8.16,27.86,5.6,6.25,0.26,879,0,Olivine,bubbling fluidised bed,2.76
+57.1,8.16,27.86,5.6,6.25,0.31,915,0,Olivine,bubbling fluidised bed,3.09
+57.9,8.46,16,1.9,16.51,0.34,899,0,Olivine,bubbling fluidised bed,3.04
+57.9,8.46,16,1.9,16.51,0.23,869,0,Olivine,bubbling fluidised bed,2.36
+32.31,5.37,14.38,8.7,41.7,0.3,800,0,Silica sand,fluidised bed,2.8
+32.31,5.37,14.38,8.7,41.7,0.3,800,0,Silica sand,fluidised bed,2.8
+32.31,5.37,14.38,8.7,41.7,0.3,800,0,Silica sand,fluidised bed,2.7
+32.31,5.37,14.38,8.7,41.7,0.3,800,1,Silica sand,fluidised bed,2.9
+32.31,5.37,14.38,8.7,41.7,0.3,800,1,Silica sand,fluidised bed,3
+27.3,4.8,18.9,7,44,0.3,750,0,Silica sand,bubbling fluidised bed,2.5
+27.3,4.8,18.9,7,44,0.3,800,0,Silica sand,bubbling fluidised bed,2.5
+27.3,4.8,18.9,7,44,0.2,750,0,Silica sand,bubbling fluidised bed,1.9
+27.3,4.8,18.9,7,44,0.2,800,0,Silica sand,bubbling fluidised bed,2
+27.3,4.8,18.9,7,44,0.2,850,0,Silica sand,bubbling fluidised bed,2
+27.3,4.8,18.9,7,44,0.3,750,0,Silica sand,bubbling fluidised bed,2.5
+27.3,4.8,18.9,7,44,0.3,850,0,Silica sand,bubbling fluidised bed,2.6
+27.3,4.8,18.9,7,44,0.4,750,0,Silica sand,bubbling fluidised bed,2.9
+27.3,4.8,18.9,7,44,0.4,800,0,Silica sand,bubbling fluidised bed,3.1
+27.3,4.8,18.9,7,44,0.4,850,0,Silica sand,bubbling fluidised bed,3.1
+27.3,4.8,18.9,7,44,0.3,800,0.5,Silica sand,bubbling fluidised bed,2.6
+27.3,4.8,18.9,7,44,0.3,850,0.5,Silica sand,bubbling fluidised bed,2.8
+27.3,4.8,18.9,7,44,0.3,750,1,Silica sand,bubbling fluidised bed,2.5
+27.3,4.8,18.9,7,44,0.3,800,1,Silica sand,bubbling fluidised bed,2.6
+50,6.2,36.3,7.6,6.3,0.17,700,0,Ofite,bubbling fluidised bed,1.49
+50,6.2,36.3,7.6,6.3,0.2,740,0,Ofite,bubbling fluidised bed,1.57
+50,6.2,36.3,7.6,6.3,0.22,750,0,Ofite,bubbling fluidised bed,1.66
+50,6.2,36.3,7.6,6.3,0.23,760,0,Ofite,bubbling fluidised bed,1.6
+50,6.2,36.3,7.6,6.3,0.29,780,0,Ofite,bubbling fluidised bed,2.01
+50,6.2,36.3,7.6,6.3,0.31,820,0,Ofite,bubbling fluidised bed,1.96
+37.6,5.42,33.2,9.08,23.4,0.25,665,0,Alumina,fluidised bed,2.15
+37.6,5.42,33.2,9.08,23.4,0.3,744,0,Alumina,fluidised bed,2.48
+37.6,5.42,33.2,9.08,23.4,0.35,670,0,Alumina,fluidised bed,2.14
+37.6,5.42,33.2,9.08,23.4,0.3,750,0,Alumina,fluidised bed,2.46
+37.6,5.42,33.2,9.08,23.4,0.35,822,0,Alumina,fluidised bed,2.83
+37.6,5.42,33.2,9.08,23.4,0.35,700,0,Alumina,fluidised bed,1.87
+37.6,5.42,33.2,9.08,23.4,0.35,828,0,Alumina,fluidised bed,2.44
+49,6.1,44.4,7,0.4,0.21,700,0,Alumina,fluidised bed,0.69
+49,6.1,44.4,7,0.4,0.21,700,0,Alumina,fluidised bed,0.96
+49,6.1,44.4,7,0.4,0.21,700,0,Alumina,fluidised bed,0.94
+49,6.1,44.4,7,0.4,0.24,750,0,Alumina,fluidised bed,1.05
+49,6.1,44.4,7,0.4,0.24,750,0,Alumina,fluidised bed,1.06
+49,6.1,44.4,7,0.4,0.23,800,0,Alumina,fluidised bed,1.12
+49,6.1,44.4,7,0.4,0.23,800,0,Alumina,fluidised bed,1.09
+48.11,5.58,39.42,7.03,6.1,0.3,826,0,Silica sand,fluidised bed,2.17
+48.11,5.58,39.42,7.03,6.1,0.29,874,0,Silica sand,fluidised bed,2.17
+48.91,5.9,33.08,9.69,11.37,0.2,700,0,Olivine,bubbling fluidised bed,1.82
+48.91,5.9,33.08,9.69,11.37,0.2,760,0,Olivine,bubbling fluidised bed,1.9
+37.02,4.64,38.01,9.5,0.88,0.38,761,0,Silica sand,bubbling fluidised bed,2.1
+40.9,5.13,42,18.1,0.98,0.38,730,0,Silica sand,bubbling fluidised bed,2.04
+44.97,5.64,46.17,25.5,1.07,0.38,699,0,Silica sand,bubbling fluidised bed,2.02
+45.89,1.61,51.26,27,1.1,0.36,704,0,Silica sand,bubbling fluidised bed,1.9
+45.89,1.61,51.26,27,1.1,0.45,738,0,Silica sand,bubbling fluidised bed,2.18
+45.89,1.61,51.26,27,1.1,0.49,765,0,Silica sand,bubbling fluidised bed,2.45
+50.13,2.47,45.15,24.4,1.59,0.3,726,0,Silica sand,bubbling fluidised bed,1.86
+50.13,2.47,45.15,24.4,1.59,0.38,767,0,Silica sand,bubbling fluidised bed,2.3
+50.13,2.47,45.15,24.4,1.59,0.46,807,0,Silica sand,bubbling fluidised bed,2.74
+54.22,3.27,39.3,21.8,2.05,0.3,747,0,Silica sand,bubbling fluidised bed,2.14
+54.22,3.27,39.3,21.8,2.05,0.34,769,0,Silica sand,bubbling fluidised bed,2.35
+54.22,3.27,39.3,21.8,2.05,0.38,780,0,Silica sand,bubbling fluidised bed,2.66
+54.22,3.27,39.3,21.8,2.05,0.45,829,0,Silica sand,bubbling fluidised bed,3
+46,6,37.3,8.1,9.63,0.3,750,0,Olivine,circulating fluidized bed,2.38
+46,6,37.3,8.1,9.63,0.3,800,0,Olivine,circulating fluidized bed,2.5
+46,6,37.3,8.1,9.63,0.3,750,0,Silica sand,circulating fluidized bed,2.22
+48.6,6.63,39.3,8.2,2.39,0.3,750,0,Olivine,circulating fluidized bed,2.53
+48.6,6.63,39.3,8.2,2.39,0.3,800,0,Olivine,circulating fluidized bed,2.63
+48.6,6.63,39.3,8.2,2.39,0.3,750,0,Silica sand,circulating fluidized bed,2.26
+48.6,6.63,39.3,8.2,2.39,0.3,800,0,Silica sand,circulating fluidized bed,2.28
+38.43,2.97,36.36,9.95,19.52,0.3,750,1,Silica sand,bubbling fluidised bed,1.09
+38.43,2.97,36.36,9.95,19.52,0.3,750,1.32,Silica sand,bubbling fluidised bed,1.16
+38.43,2.97,36.36,9.95,19.52,0.3,750,1.7,Silica sand,bubbling fluidised bed,1.21
+38.43,2.97,36.36,9.95,19.52,0.3,650,1.32,Silica sand,bubbling fluidised bed,1.03
+38.43,2.97,36.36,9.95,19.52,0.3,730,1.32,Silica sand,bubbling fluidised bed,1.16
+38.43,2.97,36.36,9.95,19.52,0.3,770,1.32,Silica sand,bubbling fluidised bed,1.21
+48.69,5.62,38.07,6,0.77,0.2,675,0,Silica sand,bubbling fluidised bed,1.52
+48.69,5.62,38.07,6,0.77,0.25,716,0,Silica sand,bubbling fluidised bed,1.82
+48.69,5.62,38.07,6,0.77,0.31,823,0,Silica sand,bubbling fluidised bed,2.08
+48.69,5.62,38.07,6,0.77,0.34,845,0,Silica sand,bubbling fluidised bed,2.26
+51.26,5.54,42.29,8,0.5,0.3,800,0.85,Silica sand,bubbling fluidised bed,1.56
+51.26,5.54,42.29,8,0.5,0.28,800,0.75,Silica sand,bubbling fluidised bed,1.41
+51.26,5.54,42.29,8,0.5,0.25,800,0.9,Silica sand,bubbling fluidised bed,1.87
+51.26,5.54,42.29,8,0.5,0.22,800,0.83,Silica sand,bubbling fluidised bed,2.3
+39.78,4.97,40.02,6,14.57,0.26,713,0,Silica sand,bubbling fluidised bed,1.72
+39.78,4.97,40.02,6,14.57,0.26,968,0,Silica sand,circulating fluidized bed,1.98
+39.78,4.97,40.02,6,14.57,0.19,687,0,Silica sand,circulating fluidized bed,1.28
+39.78,4.97,40.02,6,14.57,0.2,750,0,Silica sand,circulating fluidized bed,1.34
+39.78,4.97,40.02,6,14.57,0.22,918,0,Silica sand,circulating fluidized bed,1.67
+39.78,4.97,40.02,6,14.57,0.28,1036,0,Silica sand,circulating fluidized bed,2.07
+39.78,4.97,40.02,6,14.57,0.31,767,0,Silica sand,bubbling fluidised bed,2.04
+39.78,4.97,40.02,6,14.57,0.34,787,0,Silica sand,bubbling fluidised bed,2.05
+50.54,7.08,41.11,8,0.55,0.22,700,2.7,Silica sand,fluidised bed,1.43
+50.54,7.08,41.11,8,0.55,0.22,750,2.7,Silica sand,fluidised bed,1.51
+50.54,7.08,41.11,8,0.55,0.22,850,2.7,Silica sand,fluidised bed,5.45
+50.54,7.08,41.11,8,0.55,0.22,900,2.7,Silica sand,fluidised bed,2.53
+50.54,7.08,41.11,8,0.55,0.19,800,1.56,Silica sand,fluidised bed,2.13
+50.54,7.08,41.11,8,0.55,0.21,800,1.56,Silica sand,fluidised bed,2.25
+50.54,7.08,41.11,8,0.55,0.25,800,1.56,Silica sand,fluidised bed,2.18
+50.54,7.08,41.11,8,0.55,0.27,800,1.56,Silica sand,fluidised bed,1.88
+50.54,7.08,41.11,8,0.55,0.22,800,0,Silica sand,fluidised bed,1.46
+50.54,7.08,41.11,8,0.55,0.22,800,1.35,Silica sand,fluidised bed,2.39
+50.54,7.08,41.11,8,0.55,0.22,800,2.7,Silica sand,fluidised bed,2.23
+50.54,7.08,41.11,8,0.55,0.22,800,4.04,Silica sand,fluidised bed,1.95
+50.12,6.68,43.06,113,1.4,0.26,760,0,Silica sand,bubbling fluidised bed,2.12
+50.12,6.68,43.06,113,1.4,0.26,760,0,10 % dolomite 90 % Silica sand ,bubbling fluidised bed,2.38
+50.12,6.68,43.06,113,1.4,0.26,760,0,30 % dolomite 70 % Silica sand ,bubbling fluidised bed,2.49
+50.12,6.68,43.06,113,1.4,0.26,760,0,dolomite,bubbling fluidised bed,2.58
+51.26,5.54,42.29,8,0.5,0.3,650,0.85,Calcined dolomite and nickel based catalysts,"atmospheric pressure, indirectly heated, fluidized bed",2.01
+51.26,5.54,42.29,8,0.5,0.3,700,0.85,Calcined dolomite and nickel based catalysts,"atmospheric pressure, indirectly heated, fluidized bed",2.3
+51.26,5.54,42.29,8,0.5,0.3,800,0.85,Calcined dolomite and nickel based catalysts,"atmospheric pressure, indirectly heated, fluidized bed",2.43
+51.26,5.54,42.29,8,0.5,0.3,850,0.85,Calcined dolomite and nickel based catalysts,"atmospheric pressure, indirectly heated, fluidized bed",2.63
+46.67,5.48,45.82,10.4,7.9,0.36,740,0,Silica sand,bubbling fluidised bed,1.46
+46.67,5.48,45.82,10.4,7.9,0.36,700,0,Silica sand,bubbling fluidised bed,1.43
+49.7,5.64,44.21,10.3,1.2,0.36,700,0,Silica sand,bubbling fluidised bed,1.55
+48.19,5.56,45.01,10.35,4.55,0.36,740,0,Silica sand,bubbling fluidised bed,1.6
+48.19,5.56,45.01,10.35,4.55,0.36,700,0,Silica sand,bubbling fluidised bed,1.54
+65.25,9.1,20.74,3.82,4.23,0.2,600,0,310S,continuous fluidized bed,0.51
+65.25,9.1,20.74,3.82,4.23,0.2,800,0,310S,continuous fluidized bed,1.22
+65.25,9.1,20.74,3.82,4.23,0.2,900,0,310S,continuous fluidized bed,1.54
+65.25,9.1,20.74,3.82,4.23,0.3,600,0,310S,continuous fluidized bed,0.61
+65.25,9.1,20.74,3.82,4.23,0.3,700,0,310S,continuous fluidized bed,0.95
+65.25,9.1,20.74,3.82,4.23,0.3,900,0,310S,continuous fluidized bed,1.54
+65.25,9.1,20.74,3.82,4.23,0.4,600,0,310S,continuous fluidized bed,0.69
+65.25,9.1,20.74,3.82,4.23,0.4,700,0,310S,continuous fluidized bed,0.97
+65.25,9.1,20.74,3.82,4.23,0.4,800,0,310S,continuous fluidized bed,1.26
+65.25,9.1,20.74,3.82,4.23,0.5,600,0,310S,continuous fluidized bed,0.77
+65.25,9.1,20.74,3.82,4.23,0.5,700,0,310S,continuous fluidized bed,0.99
+65.25,9.1,20.74,3.82,4.23,0.5,800,0,310S,continuous fluidized bed,1.25
+65.25,9.1,20.74,3.82,4.23,0.5,900,0,310S,continuous fluidized bed,1.54
+51.6,6.2,40.4,9.7,0.7,0.3,718,0,Silica sand,fluidised bed,2.92
+51.8,6.2,40.6,10,0.4,0.3,815,0,Silica sand,fluidised bed,3.1
+51.8,6.2,40.6,8.8,0.4,0.3,772,0,Silica sand,fluidised bed,2.59
+51.8,6.2,40.6,9.2,0.4,0.3,787,0,Silica sand,fluidised bed,2.75
+50.4,6.25,41.6,10,0.7,0.3,766,0,Silica sand,fluidised bed,2.48
+51.8,6.2,40.6,15,0.7,0.3,752,0,Silica sand,fluidised bed,2.46
+51.8,6.2,40.6,14.7,0.7,0.3,789,0,Silica sand,fluidised bed,2.13
+48.9,7.86,40.3,6.6,2.67,0.3,728,0,Silica sand,fluidised bed,2.06
+48.9,7.86,40.3,4.2,2.67,0.3,805,0,Silica sand,fluidised bed,3.24
+49.1,7.26,39.5,10.4,3.34,0.3,701,0,Silica sand,fluidised bed,1.72
