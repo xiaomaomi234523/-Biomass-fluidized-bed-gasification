@@ -77,7 +77,7 @@ def Input_preprocess(Input_data):
     X_test_sc_st = test_data_sc_st
 
     # 保持99%的信息
-    pca = PCA(n_components=0.95)
+    pca = PCA(n_components=0.99)
     X_train_sc_st_pca = pca.fit_transform(X_train_sc_st)
     X_test_sc_st_pca = pca.transform(X_test_sc_st)
     X_train_sc_st_pca = pd.DataFrame(X_train_sc_st_pca)
