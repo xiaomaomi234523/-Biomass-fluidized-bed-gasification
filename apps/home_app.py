@@ -46,6 +46,8 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
             X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
             model = models[target]
             input_data = Input_preprocess(Input_data)
+            st.write(input_data)
+            st.write(X_train)
             input_predict = model.fit(X_train, y_train).predict(input_data)
             l.append(input_predict)
         i = 0
