@@ -31,6 +31,7 @@ def Input_preprocess(Input_data):
 
     #  跳过去除异常值，开始下面的步骤
     data = load_csv("x_data_no_outlier.csv")
+    st.write(data)
     l1 = int(0.8 * data.shape[0])
     l2 = data.shape[0] - l1
     train_data = data.head(l1)
