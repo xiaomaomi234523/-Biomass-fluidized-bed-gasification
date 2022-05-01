@@ -71,7 +71,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
             for target in ["CO", "H2", "CH4", "CO2"]:
                 X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
                 model = models[target]
-                
+                Input_data.columns=range(0,len(Input_data))
                 Input_data_T =  copy.deepcopy(Input_data)   # 浅拷贝深拷贝！！！！！！！！！
                 st.write(Input_data)
                 Input_data_T[6] = Input_data[6]+dT     
