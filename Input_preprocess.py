@@ -37,7 +37,6 @@ def Input_preprocess(Input_data):
     l2 = data.shape[0] - l1
     train_data = data.head(l1)
     test_data = data.tail(l2)
-    st.write(l1,l2)
     test_data = pd.concat([test_data,input_data])
     st.write(train_data)
     st.write(test_data)
@@ -47,7 +46,7 @@ def Input_preprocess(Input_data):
     features_columns = [col for col in train_data.columns]
     min_max_scaler = preprocessing.MinMaxScaler()
     min_max_scaler = min_max_scaler.fit(train_data)
-
+    
     train_data_scaler = min_max_scaler.transform(train_data)
     test_data_scaler = min_max_scaler.transform(test_data)
     #print("21yngfo hngiebgp1g")
@@ -63,7 +62,7 @@ def Input_preprocess(Input_data):
     pt.fit(train_data_scaler)  # 同样以训练集创建
     train_data_sc_st = pt.transform(train_data_scaler)
     test_data_sc_st = pt.transform(test_data_scaler)
-
+    
     train_data_sc_st = pd.DataFrame(train_data_sc_st)
     train_data_sc_st.columns = features_columns
 
