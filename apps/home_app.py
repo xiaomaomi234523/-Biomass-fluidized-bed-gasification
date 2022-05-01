@@ -14,7 +14,7 @@ from sklearn.svm import SVR
 from sklearn.ensemble import AdaBoostRegressor
 
 
-def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modle = 0):
+def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modle = 0):
     
     st.title("生物质流化床气化分析预测平台")
 
@@ -45,7 +45,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
         for target in ["CO", "H2", "CH4", "CO2"]:
             X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
             model = models[target]
-            input_data = Input_preprocess(Input_data)
+            #input_data = Input_preprocess(Input_data)
             input_predict = model.fit(X_train, y_train).predict(input_data)
             l.append(input_predict)
         i = 0
@@ -71,9 +71,9 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica_sand','bubbling fluidized bed'],Modl
             for target in ["CO", "H2", "CH4", "CO2"]:
                 X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
                 model = models[target]
-                    
+                
                 Input_data_T =  copy.deepcopy(Input_data)   # 浅拷贝深拷贝！！！！！！！！！
-                st.write(Input_data_T)
+                st.write(Input_data)
                 Input_data_T[6] = Input_data[6]+dT     
                 input_data_T = Input_preprocess(Input_data_T)
                 input_predict_T = model.fit(X_train, y_train).predict(input_data_T)
