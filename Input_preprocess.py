@@ -22,10 +22,10 @@ def Input_preprocess(Input_data):
     #  插进去，一起独热编码
     X_data = pd.concat([X_data,Input_data])
     X_data = pd.get_dummies(X_data)
-    #st.write(X_data)
+    st.write(X_data)
     #再拆出来
     input_data = X_data[-len(Input_data):]
-    #st.write(input_data)
+    st.write(input_data)
 
 
 
