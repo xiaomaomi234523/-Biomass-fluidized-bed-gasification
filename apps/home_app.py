@@ -38,7 +38,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
         l_ER = []
         # 以后写个json文件装最优模型
         models = {"CO": AdaBoostRegressor(learning_rate=2, n_estimators=350),"H2":AdaBoostRegressor(learning_rate=2, n_estimators=350),"CH4": AdaBoostRegressor(learning_rate=2, n_estimators=400),"CO2":GradientBoostingRegressor(max_depth=1, min_samples_split=6, n_estimators=200)}
-        load_state = st.text('Loading...')
+    
         
      
         values = []
@@ -66,6 +66,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
         
         
         if st.checkbox('给出优化建议'):
+            load_state = st.text('Loading...')
             dT = 200
             dER = 0.5
             for target in ["CO", "H2", "CH4", "CO2"]:
@@ -104,7 +105,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
                 i+=1
 
 
-        load_state.text("loading...done")
+            load_state.text("loading...done")
     elif Modle == -1:
         st.subheader("气体产出预测为：")
         input_data = Input_preprocess(Input_data)
