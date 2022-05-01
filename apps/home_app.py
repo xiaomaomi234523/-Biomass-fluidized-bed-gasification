@@ -142,7 +142,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
         # Create traces
         fig = go.Figure()
         fig.add_trace(go.Scatter(x=x, y=y0,
-                            mode='lines+markers',
+                            mode='markers',
                             name='CO[%vol_N2_free]'))
         fig.add_trace(go.Scatter(x=x, y=y1,
                             mode='lines+markers',
