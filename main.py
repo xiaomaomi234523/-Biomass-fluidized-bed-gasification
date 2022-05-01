@@ -39,6 +39,7 @@ elif input_mode == "单组数据":
             ('fluidized bed','bubbling fluidized bed','atmospheric fluidized bed','circulating fluidized bed','continuous fluidized bed'))
         Input_data = [C,H,O,Moisture,Ash,ER,T,SB,Bed_material,Bed_type]
         Input_data = pd.DataFrame([Input_data])
+        st.write(Input_data)
 
 
 # Once we have the dependencies, add a selector for the app mode on the sidebar.
