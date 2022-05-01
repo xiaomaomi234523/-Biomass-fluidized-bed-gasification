@@ -34,9 +34,9 @@ elif input_mode == "单组数据":
         T = st.sidebar.slider('T[ºC]',500,1500,800)
         SB = 0.01*st.sidebar.slider('Steam/Biomass*10^2',0,100,0)
         Bed_material = st.sidebar.selectbox("",
-            ('Silica_sand','Alumina' , 'Olivine'))
+            ('Silica sand','Alumina' , 'Olivine','Ofite','310S'))
         Bed_type = st.sidebar.selectbox("",
-            ('bubbling fluidized bed','bubbling fluidized bed'))
+            ('fluidized bed','bubbling fluidized bed','atmospheric fluidized bed','circulating fluidized bed'))
         Input_data = [C,H,O,Moisture,Ash,ER,T,SB,Bed_material,Bed_type]
         Input_data = pd.DataFrame([Input_data])
 
