@@ -36,7 +36,7 @@ elif input_mode == "单组数据":
         Bed_material = st.sidebar.selectbox("",
             ('Silica sand','Alumina' , 'Olivine','Ofite','310S'))
         Bed_type = st.sidebar.selectbox("",
-            ('fluidized bed','bubbling fluidized bed','atmospheric fluidized bed','circulating fluidized bed'))
+            ('fluidized bed','bubbling fluidized bed','atmospheric fluidized bed','circulating fluidized bed','continuous fluidized bed'))
         Input_data = [C,H,O,Moisture,Ash,ER,T,SB,Bed_material,Bed_type]
         Input_data = pd.DataFrame([Input_data])
 
