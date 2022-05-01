@@ -145,12 +145,12 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
                             mode='markers',
                             name='CO[%vol_N2_free]'))
         fig.add_trace(go.Scatter(x=x, y=y1,
-                            mode='lines+markers',
+                            mode='markers',
                             name='H2[%vol_N2_free]'))
         fig.add_trace(go.Scatter(x=x, y=y2,
-                            mode='lines+markers', name='CH4[%vol_N2_free]'))
+                            mode='markers', name='CH4[%vol_N2_free]'))
         fig.add_trace(go.Scatter(x=x, y=y3,
-                            mode='lines+markers', name='CO2[%vol_N2_free]'))
+                            mode='markers', name='CO2[%vol_N2_free]'))
         st.plotly_chart(fig, use_container_width=True)
         st.write("预测结果下载：")
         st.download_button(
