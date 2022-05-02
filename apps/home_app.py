@@ -48,7 +48,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
             #input_data = Input_preprocess(Input_data)
             input_predict = model.fit(X_train, y_train).predict(input_data)
             l.append(input_predict)
-         st.write('总产气量GY[Nm3/kg_daf]=',l[4])
+         st.write('总产气量GY[Nm3/kg_daf]=',l)
         i = 0
         for target in ["CO", "H2", "CH4", "CO2"]:
             values.append(l[i][0] / sum(l)[0] * 100)
