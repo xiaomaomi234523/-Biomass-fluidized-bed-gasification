@@ -11,11 +11,13 @@ def Input_preprocess(Input_data,GY=0):
     pd.set_option('display.max_rows', None)
     #  独热编码
     #Input_data = pd.DataFrame([Input_data])
-    c = ['GY', 'CH4', 'CO2', 'CO', 'H2']
+    
     if GY == 1:
+        c = ['GY']
         train_data = load_csv('train_data_GY.csv')
         test_data = load_csv('test_data_GY.csv')
     else:
+        c = ['GY', 'CH4', 'CO2', 'CO', 'H2']
         train_data = load_csv('train_data.csv')
         test_data = load_csv('test_data.csv')
     data = pd.concat([train_data, test_data])
