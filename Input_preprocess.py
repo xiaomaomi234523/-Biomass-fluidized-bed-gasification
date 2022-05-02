@@ -6,14 +6,18 @@ import streamlit as st
 
 # 馊主意挺多了，以后肯定会优化
 @st.cache
-def Input_preprocess(Input_data):
+def Input_preprocess(Input_data,GY=0):
     pd.set_option('display.max_columns', None)
     pd.set_option('display.max_rows', None)
     #  独热编码
     #Input_data = pd.DataFrame([Input_data])
     c = ['GY', 'CH4', 'CO2', 'CO', 'H2']
-    train_data = load_csv('train_data.csv')
-    test_data = load_csv('test_data.csv')
+    if GY == 1:
+        train_data = load_csv('train_data_GY.csv')
+        test_data = load_csv('test_data_GY.csv')
+    else:
+        train_data = load_csv('train_data.csv')
+        test_data = load_csv('test_data.csv')
     data = pd.concat([train_data, test_data])
     #print(test_data)
     X_data = data.drop(c, axis=1)
@@ -30,7 +34,10 @@ def Input_preprocess(Input_data):
 
 
     #  跳过去除异常值，开始下面的步骤
-    data = load_csv("x_data_no_outlier.csv")
+    if GY == 1:
+        data = load_csv("x_data_no_outlier_GY.csv")
+    else:
+        data = load_csv("x_data_no_outlier.csv")
     l1 = int(0.8 * data.shape[0])
     l2 = data.shape[0] - l1
     train_data = data.head(l1)
