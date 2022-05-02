@@ -112,7 +112,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
                 else:
                     str_ER = ',降低当量比也许能增大产量哦'
                 str_ = str_T + str_ER
-                st.write(target, '[Nm3/kg_daf]=', l[4][0]*l[i][0],str_)
+                st.write(target, '[Nm3/kg_daf]=', l[4][0]*l[i][0]/100,str_)
                 i+=1
 
 
