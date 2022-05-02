@@ -122,7 +122,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
         input_data = Input_preprocess(Input_data)
         input_data_GY = Input_preprocess(Input_data,GY = 1)
         l = []
-        dic = {"CO".:[],"H2":[],"CH4":[],"CO2":[]}
+        dic = {"CO[Nm3/kg_daf]":[],"H2[Nm3/kg_daf]":[],"CH4[Nm3/kg_daf]":[],"CO2[Nm3/kg_daf]":[]}
         # 以后写个json文件装最优模型
         
         load_state = st.text('Loading...')
@@ -149,10 +149,10 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
         df = pd.DataFrame(dic)
         #st.write(df)
         x = np.array(range(len(df)))
-        y0 = np.array(dic["CO"])
-        y1 = np.array(dic["H2"])
-        y2 = np.array(dic["CH4"])
-        y3 = np.array(dic["CO2"])
+        y0 = np.array(dic["CO[Nm3/kg_daf]"])
+        y1 = np.array(dic["H2[Nm3/kg_daf]"])
+        y2 = np.array(dic["CH4[Nm3/kg_daf]"])
+        y3 = np.array(dic["CO2[Nm3/kg_daf]"])
         # Create traces
         fig = go.Figure()
         fig.add_trace(go.Scatter(x=x, y=y0,
