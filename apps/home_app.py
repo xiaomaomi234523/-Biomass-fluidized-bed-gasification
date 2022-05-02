@@ -120,18 +120,20 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
     elif Modle == -1:
         st.subheader("气体产出预测为：")
         input_data = Input_preprocess(Input_data)
+        input_data_GY = Input_preprocess(Input_data,GY = 1)
         l = []
         dic = {"CO":[],"H2":[],"CH4":[],"CO2":[]}
         # 以后写个json文件装最优模型
         models = {"CO": AdaBoostRegressor(learning_rate=2, n_estimators=350),"H2":AdaBoostRegressor(learning_rate=2, n_estimators=350),"CH4": AdaBoostRegressor(learning_rate=2, n_estimators=400),"CO2":GradientBoostingRegressor(max_depth=1, min_samples_split=6, n_estimators=200)}
         load_state = st.text('Loading...')
         #st.write(input_data)
-        for target in ["CO", "H2", "CH4", "CO2"]:
+        for target in ["CO", "H2", "CH4", "CO2","GY"]:
             X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
-            
             model = models[target]
-            input_data = Input_preprocess(Input_data)
-            input_predict = model.fit(X_train, y_train).predict(input_data)
+            if target == "GY":
+                input_predict = model.fit(X_train, y_train).predict(input_data_GY)
+            else:
+                input_predict = model.fit(X_train, y_train).predict(input_data)
             l.append(input_predict)
         l = pd.DataFrame(l).T
         #st.write(l)
@@ -141,7 +143,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
         i = 0
         for target in ["CO", "H2", "CH4", "CO2"]:
             for j in range(0,len(l[0])):
-                dic[target].append(l[i][j] / mean_r[j]/4*100)
+                dic[target].append(l[i][j]*l[4][j]/100)
             i += 1
         #st.write(dic)
         df = pd.DataFrame(dic)
