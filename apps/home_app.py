@@ -42,7 +42,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
         
      
         values = []
-        for target in ["CO", "H2", "CH4", "CO2"，'GY']:
+        for target in ["CO", "H2", "CH4", "CO2",'GY']:
             X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
             model = models[target]
             #input_data = Input_preprocess(Input_data)
