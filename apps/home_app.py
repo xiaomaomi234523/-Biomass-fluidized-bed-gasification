@@ -141,7 +141,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
         #st.write(mean_r)
         #st.write(l[0][1])
         i = 0
-        for target in ["CO", "H2", "CH4", "CO2"]:
+        for target in ["CO[Nm3/kg_daf]", "H2[Nm3/kg_daf]", "CH4[Nm3/kg_daf]", "CO2[Nm3/kg_daf]"]:
             for j in range(0,len(l[0])):
                 dic[target].append(l[i][j]*l[4][j]/100)
             i += 1
