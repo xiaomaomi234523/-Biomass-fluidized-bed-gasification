@@ -74,39 +74,45 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
             load_state = st.text('Loading...')
             dT = 200
             dER = 0.5
-            for target in ["CO", "H2", "CH4", "CO2"]:
+            for target in ["CO", "H2", "CH4", "CO2","GY"]:
                 X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
                 model = models[target]
                 Input_data.columns=range(0,Input_data.shape[1])
                 Input_data_T =  copy.deepcopy(Input_data)   # 浅拷贝深拷贝！！！！！！！！！
           
-                Input_data_T[6] = Input_data[6]+dT     
-                input_data_T = Input_preprocess(Input_data_T)
+                Input_data_T[6] = Input_data[6]+dT    
+                if target == "GY":
+                    input_data_T = Input_preprocess(Input_data_T,GY = 1)
+                else:
+                    input_data_T = Input_preprocess(Input_data_T)
                 input_predict_T = model.fit(X_train, y_train).predict(input_data_T)
+                    
                 l_T.append(input_predict_T)
                 
                 Input_data_ER =  copy.deepcopy(Input_data)
                 Input_data_ER[5] = Input_data[5]+dER
-                input_data_ER = Input_preprocess(Input_data_ER)
-                input_predict_ER = model.fit(X_train, y_train).predict(input_data_ER)
+                if target == "GY":
+                    input_data_T = Input_preprocess(Input_data_T,GY = 1)
+                else:
+                    input_data_T = Input_preprocess(Input_data_T)
+                input_predict_T = model.fit(X_train, y_train).predict(input_data_T)
+                #input_data_ER = Input_preprocess(Input_data_ER)
+                #input_predict_ER = model.fit(X_train, y_train).predict(input_data_ER)
                 l_ER.append(input_predict_ER)
           
 
-
-
-            #  加起来求百分比 （一看加起来就不得百分百就尴尬了呀）
             i = 0
             for target in ["CO", "H2", "CH4", "CO2"]:
-                if l_T[i]>l[i]:
+                if l_T[i]*l_T[4]>l[i]*l[4]:
                     str_T = '提高反应温度'
                 else:
                     str_T = '降低反应温度'
-                if l_ER[i]>l[i]:
-                    str_ER = ',提高当量比也许能增大占比哦'
+                if l_ER[i]*l_ER[4]>l[i]*l[4]:
+                    str_ER = ',提高当量比也许能增大产量哦'
                 else:
-                    str_ER = ',降低当量比也许能增大占比哦'
+                    str_ER = ',降低当量比也许能增大产量哦'
                 str_ = str_T + str_ER
-                st.write(target, '[%vol_N2_free]=', l[i][0]/sum(l)[0]*100,'%—————',str_)
+                st.write(target, '[Nm3/kg_daf]=', l[4][0]*l[i][0]/sum(l)[0]*100,'%—————',str_)
                 i+=1
 
 
