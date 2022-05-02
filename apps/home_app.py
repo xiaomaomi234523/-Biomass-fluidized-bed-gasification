@@ -37,17 +37,18 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
         l_T = []
         l_ER = []
         # 以后写个json文件装最优模型
-        models = {"CO": AdaBoostRegressor(learning_rate=2, n_estimators=350),"H2":AdaBoostRegressor(learning_rate=2, n_estimators=350),"CH4": AdaBoostRegressor(learning_rate=2, n_estimators=400),"CO2":GradientBoostingRegressor(max_depth=1, min_samples_split=6, n_estimators=200)}
+        models = {"CO": AdaBoostRegressor(learning_rate=2, n_estimators=350),"H2":AdaBoostRegressor(learning_rate=2, n_estimators=350),"CH4": AdaBoostRegressor(learning_rate=2, n_estimators=400),"CO2":GradientBoostingRegressor(max_depth=1, min_samples_split=6, n_estimators=200),"GY":SVR(C=15, gamma=0.05)}
     
         
      
         values = []
-        for target in ["CO", "H2", "CH4", "CO2"]:
+        for target in ["CO", "H2", "CH4", "CO2"，'GY']:
             X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
             model = models[target]
             #input_data = Input_preprocess(Input_data)
             input_predict = model.fit(X_train, y_train).predict(input_data)
             l.append(input_predict)
+         st.write('总产气量GY[Nm3/kg_daf]=',l[4])
         i = 0
         for target in ["CO", "H2", "CH4", "CO2"]:
             values.append(l[i][0] / sum(l)[0] * 100)
