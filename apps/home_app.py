@@ -33,6 +33,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
     elif Modle ==1:
         st.subheader("气体产出预测为：")
         input_data = Input_preprocess(Input_data)
+        input_data_GY = Input_preprocess(Input_data,GY = 1)
         l = []
         l_T = []
         l_ER = []
@@ -46,7 +47,10 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
             X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
             model = models[target]
             #input_data = Input_preprocess(Input_data)
-            input_predict = model.fit(X_train, y_train).predict(input_data)
+            if target == "GY":
+                input_predict = model.fit(X_train, y_train).predict(input_data_GY)
+            else:
+                input_predict = model.fit(X_train, y_train).predict(input_data)
             l.append(input_predict)
         st.write(l)
         i = 0
