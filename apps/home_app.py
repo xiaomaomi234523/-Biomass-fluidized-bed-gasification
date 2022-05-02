@@ -27,7 +27,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
     image = Image.open(file_abs_path+r'data/fluid_bed.gif')
 
     st.image(image, caption='流化床模拟')
-
+    models = {"CO": AdaBoostRegressor(learning_rate=2, n_estimators=350),"H2":AdaBoostRegressor(learning_rate=2, n_estimators=350),"CH4": AdaBoostRegressor(learning_rate=2, n_estimators=400),"CO2":GradientBoostingRegressor(max_depth=1, min_samples_split=6, n_estimators=200),"GY":SVR(C=15, gamma=0.05)}
     if Modle == 0:
         st.subheader("请在侧边栏输入反应参数")
     elif Modle ==1:
@@ -124,7 +124,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
         l = []
         dic = {"CO":[],"H2":[],"CH4":[],"CO2":[]}
         # 以后写个json文件装最优模型
-        models = {"CO": AdaBoostRegressor(learning_rate=2, n_estimators=350),"H2":AdaBoostRegressor(learning_rate=2, n_estimators=350),"CH4": AdaBoostRegressor(learning_rate=2, n_estimators=400),"CO2":GradientBoostingRegressor(max_depth=1, min_samples_split=6, n_estimators=200)}
+        
         load_state = st.text('Loading...')
         #st.write(input_data)
         for target in ["CO", "H2", "CH4", "CO2","GY"]:
