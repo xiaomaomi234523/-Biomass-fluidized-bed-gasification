@@ -92,10 +92,10 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
                 Input_data_ER =  copy.deepcopy(Input_data)
                 Input_data_ER[5] = Input_data[5]+dER
                 if target == "GY":
-                    input_data_T = Input_preprocess(Input_data_T,GY = 1)
+                    input_data_ER = Input_preprocess(Input_data_ER,GY = 1)
                 else:
-                    input_data_T = Input_preprocess(Input_data_T)
-                input_predict_T = model.fit(X_train, y_train).predict(input_data_T)
+                    input_data_ER = Input_preprocess(Input_data_ER)
+                input_predict_ER = model.fit(X_train, y_train).predict(input_data_ER)
                 #input_data_ER = Input_preprocess(Input_data_ER)
                 #input_predict_ER = model.fit(X_train, y_train).predict(input_data_ER)
                 l_ER.append(input_predict_ER)
