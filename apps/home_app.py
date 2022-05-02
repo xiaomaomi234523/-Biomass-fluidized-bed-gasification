@@ -122,7 +122,7 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
         input_data = Input_preprocess(Input_data)
         input_data_GY = Input_preprocess(Input_data,GY = 1)
         l = []
-        dic = {"CO":[],"H2":[],"CH4":[],"CO2":[]}
+        dic = {"CO".:[],"H2":[],"CH4":[],"CO2":[]}
         # 以后写个json文件装最优模型
         
         load_state = st.text('Loading...')
@@ -157,14 +157,14 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
         fig = go.Figure()
         fig.add_trace(go.Scatter(x=x, y=y0,
                             mode='lines+markers',
-                            name='CO[%vol_N2_free]'))
+                            name='CO[Nm3/kg_daf]'))
         fig.add_trace(go.Scatter(x=x, y=y1,
                             mode='lines+markers',
-                            name='H2[%vol_N2_free]'))
+                            name='H2[Nm3/kg_daf]'))
         fig.add_trace(go.Scatter(x=x, y=y2,
-                            mode='lines+markers', name='CH4[%vol_N2_free]'))
+                            mode='lines+markers', name='CH4[Nm3/kg_daf]'))
         fig.add_trace(go.Scatter(x=x, y=y3,
-                            mode='lines+markers', name='CO2[%vol_N2_free]'))
+                            mode='lines+markers', name='CO2[Nm3/kg_daf]'))
         st.plotly_chart(fig, use_container_width=True)
         st.write("预测结果下载：")
         st.download_button(
