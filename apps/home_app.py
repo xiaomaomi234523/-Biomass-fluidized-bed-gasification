@@ -72,8 +72,8 @@ def run(Input_data=[0,0,0,0,0,0,0,0,'Silica sand','bubbling fluidized bed'],Modl
         
         if st.checkbox('给出优化建议'):
             load_state = st.text('Loading...')
-            dT = 200
-            dER = 0.5
+            dT = 100
+            dER = 0.2
             for target in ["CO", "H2", "CH4", "CO2","GY"]:
                 X_train, X_test, y_train, y_test, train_data, test_data = load_all(target)
                 model = models[target]
